@@ -74,6 +74,24 @@ nav {
 	a:link {
     text-decoration: none;
 	}
+
+	#rubyNav {
+		a:hover {
+			color: #CF1D24 !important;
+		}
+	}
+
+	#jsNav {
+		a:hover {
+			color: #F0DB4F !important;
+		}
+	}
+
+	#htmlNav {
+		a:hover {
+			color: #F16529 !important;
+		}
+	}
 }
 
 h1 {
@@ -97,3 +115,4 @@ h2 {
 	vertical-align: bottom;
 	//display: block;
 }
+
