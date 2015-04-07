@@ -104,6 +104,12 @@ nav {
 	a:link {
     text-decoration: none;
 	}
+	
+	#homeNav {
+		a:hover {
+			color: #4DB84D !important;
+		}
+	}
 
 	#rubyNav {
 		a:hover {
