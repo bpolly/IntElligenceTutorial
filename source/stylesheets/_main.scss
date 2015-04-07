@@ -1,0 +1,99 @@
+body {
+	background-image: url("../images/black_lozenge.png");
+	color: #ffffff;
+	//font-family: 'Source Code Pro';
+	font-family: 'Droid Serif', serif;
+	//font-family: 'Roboto Condensed', sans-serif;
+	margin-top: 0;
+	margin: 0;
+}
+
+.code {
+    font-family: 'Source Code Pro';
+    font-size: .8em;
+    border: groove white 1px;
+    padding: 8px;
+    line-height: 1.3;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    margin: 0;
+    overflow-wrap: break-word;
+
+    .cl {
+    	font-size: 15px;
+    	border: none;
+    	color: $primary-color;
+    }
+}
+
+.container {
+	background-color: rgba(0, 0, 0, 0.3);
+	height: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 0;
+	width: 65%;
+	border-left: solid $primary-color 8px;
+	border-right: solid $primary-color 8px;
+	padding: 0 20px;
+}
+
+nav {
+	font-family: 'Roboto Condensed', sans-serif;
+	text-align: center;
+	margin: 10px, 0;
+	background-color: rgb(20,20,20);
+	padding: 12px 0;
+	-webkit-box-shadow: 0 8px 6px -6px black;
+       -moz-box-shadow: 0 8px 6px -6px black;
+            box-shadow: 0 8px 6px -6px black;
+    border-bottom: solid $primary-color 1px;
+	ul {
+		height: 33px;
+		margin: 0;
+    	list-style-type: none;
+    	vertical-align: middle;
+    	padding: 4px 0;
+	}
+
+	li {
+		font-size: 20px;
+	    display: inline;
+	    margin-right: 15px;
+	}
+
+	a:hover {
+		color: $primary-color;
+
+	}
+
+	a {
+		color: white;
+	}
+
+	a:link {
+    text-decoration: none;
+	}
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Roboto Condensed', sans-serif;
+	margin-top: 0;
+	padding-top: 20px;
+}
+
+h2 {
+	color: $primary-color;
+	text-align: left;
+}
+
+#rubyLogo {
+	width:60px;
+	height:65px;
+	text-align: center;
+	vertical-align: bottom;
+	//display: block;
+}
