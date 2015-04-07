@@ -70,5 +70,63 @@ Purpose:
 puts "Hello, world!"
 </pre></p>
 <p>Notice that though <span class="inlinecode">puts</span> is a function, no parentheses are needed before passing it the argument "Hello, world!" This is a special characteristic of Ruby: parentheses are optional for parameter passing. You might have also noticed the lack of a semicolon at the end of the <span class="inlinecode">puts</span> statement. In Ruby, semicolons are also optional.</p>
+
+
+<h3>If/Else Statements</h3>
+<p>The fundamental basis of programming is predicated on doing something when one condition is true and doing something else when it is false. This still applies in Ruby. Ruby has a slighly different way of doing it, which you will see below: </p>
+<p><pre class="code">
+if condition
+	statement is true
+else
+	statement is false
+end
+</pre></p>
+
+<p>Here is an example of one in action.</p>
+<p><pre class="code">
+if isSummer
+	"Let's go outside!"
+else
+	"Let's not!"
+end
+</pre></p>
+<p>In this example, isSummer is a boolean value that is either true or false. If isSummer evaluates to <span class="inlinecode">true</span> then the String "Let's go outside!" is printed. If isSummer evaluates to <span class="inlinecode">false</span> then "Let's not!" is printed.</p>
+
+<h3>Loops</h3>
+<p>The most common element in any software program is the loop. Ruby gives developers multiple ways to implement a loop. </p>
+<p><pre class="code">
+// Example WHILE loop
+while i < max  do
+   i +=1
+end
+</pre></p>
+
+<p><pre class="code">
+// Example FOR loop
+for i in arr do
+   puts "New element"
+end
+</pre></p>
+
+<p><pre class="code">
+// Example TIMES loop
+15.times  do
+   puts "I can count to 15!"
+end
+</pre></p>
+
+<p>This loop is an example of a Ruby specific loop. In Ruby, even numbers are considered objects. A number object has a method called "times()" that will do something that object's value times. So it will run this loop 15 times.</p>
+
+<p><pre class="code">
+// Example RANGE loop
+for i in 0..10
+   puts "I can count to 10!"
+end
+</pre></p>
+
+<p>This is another example of a Ruby specific loop. Ruby can interpret ranges of numbers as indices for the loop. So the <span class="inlinecode">0..10</span> is read as do this for each value of i between 1 and 10.</p>
+
+
+
 <p>Stuff to add: if statements, loops, string interpolation, arrays, methods (and parameters, including blocks of code), classes (objects of classes, @ variables).
 
