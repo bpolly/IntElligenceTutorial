@@ -26,6 +26,11 @@ body {
     }
 }
 
+.inlinecode {
+    font-family: 'Source Code Pro';
+    color: $primary-color;
+}
+
 .container {
 	background-color: rgba(0, 0, 0, 0.4);
 	height: 1000px;
