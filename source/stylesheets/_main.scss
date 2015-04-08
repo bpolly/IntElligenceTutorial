@@ -6,7 +6,7 @@ body {
 	background-image: url("../images/dark_embroidery.png");
 	color: #ffffff;
 	//font-family: 'Source Code Pro';
-	font-family: 'Droid Serif', serif;
+	font-family: 'Playfair Display', serif;
 	//font-family: 'Roboto Condensed', sans-serif;
 	margin-top: 0;
 	margin: 0;
@@ -134,7 +134,7 @@ h1 {
 	color: white;
 	text-align: center;
 	font-size: 50px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 	margin-top: 0;
 	padding-top: 20px;
 }
@@ -143,14 +143,14 @@ h2 {
 	color: white;
 	text-align: left;
 	font-size: 40px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 h3 {
 	color: $primary-color;
 	text-align: left;
 	font-size: 21px;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 #logos {
@@ -163,6 +163,7 @@ h3 {
 
 #rubyInstallLinks {
 	font-family: 'Roboto Condensed', sans-serif;
+	padding-left: 0;
 	ul {
 		height: 33px;
 		margin: 0;
@@ -175,9 +176,10 @@ h3 {
 		font-size: 20px;
 	    //display: inline;
 	    margin-right: 15px;
+	    list-style-type: none;
 	}
 
-		a:hover {
+	a:hover {
 		color: $primary-color;
 
 	}
@@ -187,4 +189,53 @@ h3 {
 	}
 
 }
+
+footer {
+	font-family: 'Roboto Condensed', sans-serif;
+    background-color: #141414;
+    padding-bottom: 5px;
+    border-top: solid $primary-color 2px;
+    height: 140px;
+    text-align: center;
+    font-size: 16px;
+
+    ul {
+    	display:inline-block;
+    	vertical-align: top;
+    	list-style-type: none;
+	}
+
+	#tuts, #members {
+    	color: $primary-color;
+    	font-weight: 800;
+    	margin-bottom: 5px;
+	}
+
+		#rubyNav {
+		a:hover {
+			color: #CF1D24 !important;
+		}
+	}
+
+	#jsNav {
+		a:hover {
+			color: #F0DB4F !important;
+		}
+	}
+
+	#htmlNav {
+		a:hover {
+			color: #F16529 !important;
+		}
+	}
+
+	a {
+		color: white;
+	}
+
+	a:link {
+    text-decoration: none;
+	}
+}
+
 
