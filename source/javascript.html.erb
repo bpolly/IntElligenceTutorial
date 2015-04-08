@@ -2,28 +2,24 @@
 
 <h1><img src="../build/images/javascript_logo.png" alt="JavaScript Logo" id="logos"><span>  JavaScript</span></h1>
 
-<h2>Installation</h2>
-First, install Homebrew:
+<h2>Introduction</h2>
+JavaScript is.......
+
+<h2>Getting Started</h2>
+To begin using JavaScript, create a basic HTML document.
+Make sure to review the <a href="htmlcss.html">HTML/CSS tutorial</a> if you are unfamiliar with how to do this.
+The following line of code is used to link the JavaScript file to the HTML file:
 <p><pre class="code">
-<span class="code cl">$</span> ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+<span class="code cl">1</span> <script src="scripts/main.js"></script>
 </pre></p>
 
-Next install Ruby-env:
+It will be included before your closing </body> tag, as shown below.
 <p><pre class="code">
-<span class="code cl">$</span> brew install rbenv ruby-build
+<span class="code cl">1</span> <html>
+<span class="code cl">2</span> <body>
+<span class="code cl">3</span> <script src="scripts/main.js"></script>
+<span class="code cl">4</span> </body>
+<span class="code cl">5</span> </html>
 </pre></p>
 
-Add rbenv to bash so that it loads every time you open a terminal
-<p><pre class="code">
-<span class="code cl">$</span> echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
-source ~/.bash_profile
-</pre></p>
-
-Install Ruby:
-<p><pre class="code">
-<span class="code cl">$</span> rbenv install 2.2.1
-<span class="code cl">$</span> rbenv global 2.2.1
-<span class="code cl">$</span> ruby -v
-</pre></p>
-
-<h2>Using Ruby</h2>
+<h2>Next Step</h2>
