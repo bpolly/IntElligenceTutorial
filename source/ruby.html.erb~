@@ -115,7 +115,7 @@ end
 end
 </pre></p>
 
-<p>This loop is an example of a Ruby specific-loop. In Ruby, even numbers will be wrapped into objects. A number object has a method called "times()" that will do something that object's value times. So it will run this loop 15 times.</p>
+<p>This loop is an example of a Ruby specific loop. In Ruby, even numbers are considered objects. A number object has a method called "times()" that will do something that object's value times. So it will run this loop 15 times.</p>
 
 <p><pre class="code">
 // Example RANGE loop
@@ -124,20 +124,9 @@ for i in 0..10
 end
 </pre></p>
 
-<p>This is another example of a Ruby specific loop. Ruby can interpret ranges of numbers as indices for the loop. So the <span class="inlinecode">0..10</span> is read as do this for each value of i between 1 and 10 (inclusive).</p>
+<p>This is another example of a Ruby specific loop. Ruby can interpret ranges of numbers as indices for the loop. So the <span class="inlinecode">0..10</span> is read as do this for each value of i between 1 and 10.</p>
 
-<h3>Arrays</h3>
-<p>In Ruby, arrays are a very powerful and versatile data structure. As in many programming languages, </p>
 
-<h3>Methods</h3>
-<p>Methods in Ruby are very simple to define. Since Ruby is a dynamically-typed language, no parameter types nor return types need to be defined. Writing a new method is as easy as shown below.</p>
 
-<p><pre class="code">
-// Example method that prints the variable passed into it
-def say(input)
-    puts input
-end
-</pre></p>
+<p>Stuff to add: if statements, loops, string interpolation, arrays, methods (and parameters, including blocks of code), classes (objects of classes, @ variables).
 
-<p>Stuff to add: if statements, loops, string interpolation (mention that strings primitives), arrays, methods (and parameters, including blocks of code), classes (objects of classes, @ variables).
-At some point, it should also be added that Ruby is a dynamically-typed language.</p>
