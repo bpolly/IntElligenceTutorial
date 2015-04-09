@@ -218,13 +218,14 @@ class Tree
     @species
     @age
 
+    <span class="comment">// Constructor</span>
     def initialize(gen, spec, years)
         @genus = gen
         @species = spec
         @age = years
     end
 
-    def completeName
+    def completeSpeciesName
         "#{genus} #{species} of age #{age} years"
     end
 
@@ -232,7 +233,13 @@ class Tree
         @age = @age + 1
     end
 end
+
+fig = Tree.new("Ficus", "carica", 17)
+fig.age = 20 <span class="comment">// => The age of the "fig" object is now 20.</span>
 </pre></p>
 
-<p>Stuff to add: mention that strings primitives, clean up arrays section (mention that arrays can contain multiple types), blocks of code, classes (objects of classes, @ variables).</p>
-<p>Note: we should clear up the inconsistencies in referring to methods with or without parentheses.</p>
+<p>The above definition of a "Tree" class shows the proper syntax for setting up the class and creating methods for it. The first line in the class, "<span class="inlinecode">attr_accessor :genus, :species, :age</span>", is an especially useful one. This line will tell Ruby to automatically create what are known as accessors and mutators for the class variables <span class="inlinecode">genus</span>, <span class="inlinecode">species</span>, and <span class="inlinecode">age</span>. By including this line of code, there is no need to define a method to be able get or set the value of any of those variables once an instance of the class has been created. For example, for the <span class="inlinecode">fig</span> object, the age can be easily modified using an assignment.</p>
+<p>Also of note is the "@" symbol in front of the variable names. This signifies to Ruby that these are instance variables, meaning that each object of the Tree class will have their own individual values for each of those variables.</p>
+<p>Lastly, the <span class="inlinecode">initialize()</span> method is an interesting one. This is the constructor method that gets called when you create a new Tree instance using <span class="inlinecode">Tree.new()</span>.
+
+<p>Stuff to add: mention that strings are primitives, clean up arrays section (mention that arrays can contain multiple types), blocks of code, classes (objects of classes, @ variables).</p>
