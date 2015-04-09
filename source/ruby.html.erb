@@ -66,7 +66,7 @@ Purpose:
 <h3>Hello World Program</h3>
 <p>The seemingly obligatory start for learning any new programming language is the infamous "Hello World" program. Since Ruby is an interpreted language, all you need to do to greet the world is create a file named "HelloWorld.rb" and put the following code in it.</p>
 <p><pre class="code">
-// HelloWorld.rb
+<span class="comment">// HelloWorld.rb</span>
 puts "Hello, world!"
 </pre></p>
 <p>Notice that though <span class="inlinecode">puts</span> is a function, no parentheses are needed before passing it the argument "Hello, world!" This is a special characteristic of Ruby: parentheses are optional for parameter passing. You might have also noticed the lack of a semicolon at the end of the <span class="inlinecode">puts</span> statement. In Ruby, semicolons are also optional.</p>
@@ -95,21 +95,21 @@ end
 <h3>Loops</h3>
 <p>The most common element in any software program is the loop. Ruby gives developers multiple ways to implement a loop. </p>
 <p><pre class="code">
-// Example WHILE loop
+<span class="comment">// Example WHILE loop</span>
 while i < max  do
    i +=1
 end
 </pre></p>
 
 <p><pre class="code">
-// Example FOR loop
+<span class="comment">// Example FOR loop</span>
 for i in arr do
    puts "New element"
 end
 </pre></p>
 
 <p><pre class="code">
-// Example TIMES loop
+<span class="comment">// Example TIMES loop</span>
 15.times  do
    puts "I can count to 15!"
 end
@@ -118,7 +118,7 @@ end
 <p>This loop is an example of a Ruby specific-loop. In Ruby, even numbers will be wrapped into objects. A number object has a method called "times()" that will do something that object's value times. So it will run this loop 15 times.</p>
 
 <p><pre class="code">
-// Example RANGE loop
+<span class="comment">// Example RANGE loop</span>
 for i in 0..10
    puts "I can count to 10!"
 end
@@ -129,15 +129,78 @@ end
 <h3>Arrays</h3>
 <p>In Ruby, arrays are a very powerful and versatile data structure. As in many programming languages, </p>
 
+<p>There are multiple ways of instantiating them in Ruby. One way is to give it all of its elements when you make it.</p>
+<p><pre class="code">
+arr = [1, 2, 3, 4, 5]
+</pre></p>
+
+<p>Another way is to give it space for a certain number of spots and assign them later.</p>
+<p><pre class="code">
+arr = Array.new(5)
+</pre></p>
+
+<p>You can assign values like you would in a Java array.</p>
+<p><pre class="code">
+arr = [1, 2, 3, 4, 5]
+puts arr[4]  <span class="comment">// => prints "5"</span>
+puts arr[0]  <span class="comment">// => prints "1"</span>
+</pre></p>
+
+<p>To add items to the array, you have multiple options:</p>
+<p><pre class="code">
+arr = [1, 2, 3, 4, 5]
+arr.push(6)
+<span class="comment">// arr is now = [1, 2, 3, 4, 5, 6]</span>
+arr.insert(2, 'web')
+<span class="comment">// arr is now = [1, 2, 'web', 3, 4, 5, 6]</span>
+</pre></p>
+
+<p>To remove items from the array, you have multiple options:</p>
+<p><pre class="code">
+arr = [1, 2, 3, 4, 5]
+arr.pop()		<span class="comment">//=> returns 5</span>
+<span class="comment">// arr is now = [1, 2, 3, 4]</span>
+arr.delete_at(2)	<span class="comment">//=> returns 3</span>
+<span class="comment">// arr is now = [1, 2, 4]</span>
+</pre></p>
+
 <h3>Methods</h3>
 <p>Methods in Ruby are very simple to define. Since Ruby is a dynamically-typed language, no parameter types nor return types need to be defined. Writing a new method is as easy as shown below.</p>
 
 <p><pre class="code">
-// Example method that prints the variable passed into it
+<span class="comment">// Example method that prints the variable passed into it</span>
 def say(input)
     puts input
 end
 </pre></p>
+
+<p><pre class="code">
+<span class="comment">// This method calculates the square of a number and returns the result. The result is assigned to the result variable and printed using the "puts" method</span>
+def square(num)
+    num*num
+end
+
+result = square(5)
+puts result
+</pre></p>
+
+<p>So in this example, we define a <span class="inlinecode">square()</span> method that squares a given number and the result is the return value of the method. This result is then assigned to a <span class="inlinecode">result</span> variable which is then outputted using the <span class="inlinecode">puts()</span> method. </p>
+
+<h3>String Interpolation</h3>
+<p>One useful feature of Ruby is called String Interpolation. It allows the developer to put Ruby code in the middle of a string. It is done by using the <span class="inlinecode">#{code}</span> notation. The code inside of the brackets will be executed first and the result will be outputted in its place. </p>
+
+<p>Remember the example class we wrote for using the <span class="inlinecode">square()</span> method? We can write it in fewer lines using string interpolation.</p>
+
+<p><pre class="code">
+<span class="comment">// New Square class using string interpolation</span>
+def square(num)
+    num*num
+end
+
+puts #{square(5)}
+</pre></p>
+
+<p>This time, the return result of <span class="inlinecode">square()</span> is intereted when the <span class="inlinecode">puts</span> method is executed. Since <span class="inlinecode">puts</span> takes a string as its input, the <span class="inlinecode">#{square(5)}</span> is considered a string and the method call is the string interpolation. In one fell swoop the method <span class="inlinecode">square(5)</span> gets executed, the result is placed into a temporary string, which is then printed by <span class="inlinecode">puts</span>. Pretty neat, right?</p>
 
 <p>Stuff to add: if statements, loops, string interpolation (mention that strings primitives), arrays, methods (and parameters, including blocks of code), classes (objects of classes, @ variables).
 At some point, it should also be added that Ruby is a dynamically-typed language.</p>
