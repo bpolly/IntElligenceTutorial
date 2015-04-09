@@ -93,41 +93,6 @@ end
 </pre></p>
 <p>In this example, <span class="inlinecode">isSummer</span> is a boolean value that is either true or false. If <span class="inlinecode">isSummer</span> evaluates to <span class="inlinecode">true</span> then the string "Let's go outside!" is printed. If <span class="inlinecode">isSummer</span> evaluates to <span class="inlinecode">false</span> then "Let's not!" is printed. In this case, <span class="inlinecode">isSummer</span> is true, so "Let's go outside!" will be printed to the screen. You should take note that the "<span class="inlinecode">isSummer = true</span>" is not just the assignment of a value to the <span class="inlinecode">isSummer</span> variable. In fact, it is the declaration of the variable, since <span class="inlinecode">isSummer</span> had never been used before in the program. You may be asking yourself why there is no type declaration in front of the declaration, such as writing "<span class="inlinecode">boolean isSummer = true</span>". In Ruby, variable types do not need to be declared! The language even takes it a step forward and allows the type of a variable to change throughout a program. For example, the <span class="inlinecode">isSummer</span> variable might later be used to hold a number instead of a boolean.</p>
 
-<h3>Loops</h3>
-<p>The most common element in any software program is the loop. Ruby gives developers multiple ways to implement a loop. </p>
-<p><pre class="code">
-<span class="comment">// Example WHILE loop</span>
-i = 0
-while i < max  do
-   i +=1
-end
-</pre></p>
-
-<p><pre class="code">
-<span class="comment">// Example FOR loop</span>
-for i in arr do
-   puts "New element"
-end
-</pre></p>
-
-<p><pre class="code">
-<span class="comment">// Example TIMES loop</span>
-15.times  do
-   puts "I can count to 15!"
-end
-</pre></p>
-
-<p>This loop is an example of a Ruby specific-loop. In Ruby, even numbers will be wrapped into objects. A number object has a method called <span class="inlinecode">times()</span> that will do something that object's value times. So it will run this loop 15 times.</p>
-
-<p><pre class="code">
-<span class="comment">// Example RANGE loop</span>
-for i in 0..10
-   puts "I can count to 10!"
-end
-</pre></p>
-
-<p>This is another example of a Ruby specific loop. Ruby can interpret ranges of numbers as indices for the loop. So the <span class="inlinecode">0..10</span> is read as do this for each value of i between 1 and 10 (inclusive).</p>
-
 <h3>Arrays</h3>
 <p>In Ruby, arrays are a very powerful and versatile data structure. As in many programming languages, </p>
 
@@ -166,6 +131,41 @@ arr.delete_at(2)	<span class="comment">//=> returns 3</span>
 <span class="comment">// arr is now = [1, 2, 4]</span>
 </pre></p>
 
+<h3>Loops</h3>
+<p>The most common element in any software program is the loop. Ruby gives developers multiple ways to implement a loop. </p>
+<p><pre class="code">
+<span class="comment">// Example WHILE loop</span>
+i = 0
+while i < max  do
+   i +=1
+end
+</pre></p>
+
+<p><pre class="code">
+<span class="comment">// Example FOR loop</span>
+for i in arr do
+   puts "New element"
+end
+</pre></p>
+
+<p><pre class="code">
+<span class="comment">// Example TIMES loop</span>
+15.times  do
+   puts "I can count to 15!"
+end
+</pre></p>
+
+<p>This loop is an example of a Ruby specific-loop. In Ruby, even numbers will be wrapped into objects. A number object has a method called <span class="inlinecode">times()</span> that will do something that object's value times. So it will run this loop 15 times.</p>
+
+<p><pre class="code">
+<span class="comment">// Example RANGE loop</span>
+for i in 0..10
+   puts "I can count to 10!"
+end
+</pre></p>
+
+<p>This is another example of a Ruby specific loop. Ruby can interpret ranges of numbers as indices for the loop. So the <span class="inlinecode">0..10</span> is read as do this for each value of i between 1 and 10 (inclusive).</p>
+
 <h3>Methods</h3>
 <p>Methods in Ruby are very simple to define. Since Ruby is a dynamically-typed language, no parameter types nor return types need to be defined. Writing a new method is as easy as shown below.</p>
 
@@ -196,7 +196,7 @@ puts result
 <p>Remember the example class we wrote for using the <span class="inlinecode">square()</span> method? We can write it in fewer lines using string interpolation.</p>
 
 <p><pre class="code">
-<span class="comment">// New Square class using string interpolation</span>
+<span class="comment">// New "square()" method using string interpolation</span>
 def square(num)
     num*num
 end
@@ -207,6 +207,27 @@ puts "The square of 5 is #{square(5)}"
 <p>This time, the return result of <span class="inlinecode">square()</span> is interpreted when the <span class="inlinecode">puts()</span> method is executed. Since <span class="inlinecode">puts()</span> takes a string as its input, the <span class="inlinecode">#{square(5)}</span> is considered a string and the method call is the string interpolation. In one fell swoop the method <span class="inlinecode">square(5)</span> gets executed, the result is placed into a string prefixed with "The square of 5 is", and the string is then printed by <span class="inlinecode">puts()</span>. Pretty neat, right?</p>
 
 <h3>Classes</h3>
+Like in other object-oriented programming languages, Ruby uses classes to group together methods and variables. To create a class in Ruby, use the "class" keyword followed by the name of the class, making sure that the name starts with a capital letter. The end of a class definition is signified by the keyword "end". An example class is shown below.
+
+<p><pre class="code">
+<span class="comment">// New "Tree" class</span>
+class Tree
+    attr_accessor :genus, :species, :age
+
+    @genus
+    @species
+    @age
+
+    def initialize(gen, spec, years)
+        @genus = gen
+        @species = spec
+        @age = years
+    end
+
+    def completeString
+        "#{genus} #{species} of age #{age}"
+    end
+end
+</pre></p>
 
 <p>Stuff to add: mention that strings primitives, clean up arrays section (mention that arrays can contain multiple types), blocks of code, classes (objects of classes, @ variables).</p>
-<p>Note: we should clear up the inconsistencies in referring to methods with or without parentheses.</p>
