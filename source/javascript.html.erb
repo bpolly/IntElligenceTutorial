@@ -17,6 +17,7 @@ The following line of code is used to link the JavaScript file to the HTML file:
 <p><pre class="code">
 <span class="code cl">1</span> <script src="scripts/main.js"></script>
 </pre></p>
+
 It will be included before your closing </body> tag, as shown below.
 <p><pre class="code">
 <span class="code cl">1</span> &lt;html&gt
@@ -28,8 +29,62 @@ It will be included before your closing </body> tag, as shown below.
 
 <h2>Next Step</h2>
 
+<h3>Conditionals</h3>
+<p>Just like with many other coding languages, you can use conditional statements in JavaScript. The most common conditional is an if...else statement:</p>
+
+<p><pre class="code">
+var color = 'purple';
+if (color === 'purple'){
+	alert('Yay! Purple is my favorite color!');
+} else {
+	alert('Boo! My favotite color is purple');
+}
+</pre></p>
+
+<p>So in the above example, if color === purple evaluates to true, the code in the if statement will be executed. Otherwise, the code in the else statement would be executed.</p>
+
+<h3>Functions</h3>
+<p>Similar to other languages you may have used before, functions in JavaScript can be used to package code that you want to use again later.</p>
+
+<p>For example, we can select the h1 element from our sample webpage using a function:</p>
+
+<p><pre class="code">
+var exampleVar = document.querySelector('h1');
+</pre></p>
+
+<p>You also saw an example of the alert function in a previous example:</p>
+
+<p><pre class="code">
+alert('hello world!');
+</pre></p>
+
+<p>These kinds of functions are already stored in your browser, so they are already available for anyone to use.</p>
+
+<p>You can also write your own functions. Let's try it now!</p>
+
+<p><pre class="code">
+function add(a, b){
+	var sum = a + b;
+	return sum;
+}
+</pre></p>
+
+<p>Now we can call the add function to add two numbers:</p>
+
+<p><pre class="code">
+add(5,23);
+add(17,2);
+add(0.5,2.3);
+</pre></p>
+
+<h3>Events</h3>
+
+
+
+<h2>Now let's add to our website!</h2>
+<h2>Conclusion</h2>
 <p>Add the following JavaScript code to our example HTML file:<p>
-____
+
 <h2>Explanation</h2>
 <p>JavaScript is capable of manipulating the content of our HTML document.
 In the example, we first selected the H1 element of our document, then we selected the Inner HTML.
@@ -120,4 +175,37 @@ The chart below demonstrates the syntax for each of the types available in JavaS
 <td>&#33;, &#33;&#61;</td>
 <td>Negation, not equal</td>
 </tr>
+</table>
+	<tr>
+		<td>&#43;</td>
+		<td>Concatenation, Add</td>
+	</tr>
+	<tr>
+		<td>&#45;</td>
+		<td>Subtract</td>
+	</tr>
+	<tr>
+		<td>&#42;</td>
+		<td>Multiply</td>
+	</tr>
+	<tr>
+		<td>&#47;</td>
+		<td>Divide</td>
+	</tr>	
+	<tr>
+		<td>&#61;</td>
+		<td>Assignment</td>
+	</tr>
+	<tr>
+		<td>&#61;&#61;&#61;</td>
+		<td>Identity</td>
+	</tr>
+	<tr>
+		<td>&#61;&#61;</td>
+		<td>Compare value</td>
+	</tr>
+	<tr>
+		<td>&#33;, &#33;&#61;</td>
+		<td>Negation, not equal</td>
+	</tr>
 </table>
