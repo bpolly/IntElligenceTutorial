@@ -4,7 +4,7 @@
 <h1>
 <img src="../build/images/Ruby_logo.png" alt="Ruby Logo" id="logos"><span>  Ruby</span></h1>
 
-Ruby is a programming language built for the web. It was built to make reading and writing the language very natural and easy to understand.
+Ruby is a programming language that became popular for its use on the web. It was built to make reading and writing the language very natural and easy to understand.
 
 
 <h2>Installation</h2>
@@ -84,18 +84,20 @@ end
 
 <p>Here is an example of one in action.</p>
 <p><pre class="code">
+isSummer = true
 if isSummer
-	"Let's go outside!"
+	puts "Let's go outside!"
 else
-	"Let's not!"
+	puts "Let's not!"
 end
 </pre></p>
-<p>In this example, isSummer is a boolean value that is either true or false. If isSummer evaluates to <span class="inlinecode">true</span> then the String "Let's go outside!" is printed. If isSummer evaluates to <span class="inlinecode">false</span> then "Let's not!" is printed.</p>
+<p>In this example, isSummer is a boolean value that is either true or false. If isSummer evaluates to <span class="inlinecode">true</span> then the string "Let's go outside!" is printed. If isSummer evaluates to <span class="inlinecode">false</span> then "Let's not!" is printed. In this case, isSummer is true, so "Let's go outside!" will be printed to the screen. You should take note that the "<span class="inlinecode">isSummer = true</span>" is not just the assignment of a value to the isSummer variable. In fact, it is the declaration of the variable, since isSummer had never been used before in the program. You may be asking yourself why there is no type declaration in front of the declaration, such as writing "<span class="inlinecode">boolean isSummer = true</span>". In Ruby, variable types do not need to be declared! The language even takes it a step forward and allows the type of a variable to change throughout a program. For example, the isSummer variable might later be used to hold a number instead of a boolean.</p>
 
 <h3>Loops</h3>
 <p>The most common element in any software program is the loop. Ruby gives developers multiple ways to implement a loop. </p>
 <p><pre class="code">
 <span class="comment">// Example WHILE loop</span>
+i = 0
 while i < max  do
    i +=1
 end
@@ -186,7 +188,7 @@ result = square(5)
 puts result
 </pre></p>
 
-<p>In this example, we define a <span class="inlinecode">square()</span> method that squares a given number and the result is the return value of the method. The method is then called and the result is assigned to a <span class="inlinecode">result</span> variable which is then outputted using the <span class="inlinecode">puts()</span> method. </p>
+<p>In this example, we define a <span class="inlinecode">square()</span> method that squares a given number and the result is the return value of the method. The method is then called and the result is assigned to a <span class="inlinecode">result</span> variable which is then outputted using the <span class="inlinecode">puts()</span> method. You may have noticed that there is no return statement in this method. In Ruby, the "return" keyword is available to be used, but it is optional because the evaluation of the last statement in a method is automatically taken as its return value if no return statement is included.</p>
 
 <h3>String Interpolation</h3>
 <p>One useful feature of Ruby is called String Interpolation. It allows the developer to put Ruby code in the middle of a string. It is done by using the <span class="inlinecode">#{code}</span> notation. The code inside of the brackets will be executed first and the result will be outputted in its place. </p>
@@ -204,5 +206,5 @@ puts "The square of 5 is #{square(5)}"
 
 <p>This time, the return result of <span class="inlinecode">square()</span> is interpreted when the <span class="inlinecode">puts</span> method is executed. Since <span class="inlinecode">puts</span> takes a string as its input, the <span class="inlinecode">#{square(5)}</span> is considered a string and the method call is the string interpolation. In one fell swoop the method <span class="inlinecode">square(5)</span> gets executed, the result is placed into a string prefixed with "The square of 5 is", and the string is then printed by <span class="inlinecode">puts</span>. Pretty neat, right?</p>
 
-<p>Stuff to add: mention that strings primitives, mention that Ruby is dynamically-typed, arrays, blocks of code, classes (objects of classes, @ variables).</p>
+<p>Stuff to add: mention that strings primitives, clean up arrays section (mention that arrays can contain multiple types), blocks of code, classes (objects of classes, @ variables).</p>
 <p>Note: we should clear up the inconsistencies in referring to methods with or without parentheses.</p>
