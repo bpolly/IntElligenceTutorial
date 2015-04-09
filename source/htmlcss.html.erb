@@ -6,27 +6,94 @@
 
 
 <h2>Installation</h2>
-First, install Homebrew:
+<p>Luckily for us, the ability to read and make sense of HTML and CSS code is built-in to your everyday browser! That means there's no messy setup and we can get right down to creating webpages using your text editor of choice.
+</p>
+
+<h2>Writing HTML</h2>
+<p>The first thing we need to talk about is what HTML is and what it can do for us.</p>
+<p>HTML stands for HyperText Markup Language - what is a markup language you ask?  Well, a markup language is a language designed to make it easy to "mark up" different sections of your document in different styles.  HTML accomplishes this by using matched tags similar to what you've seen in XML trees.
+</p>
+
+<h3>Structure and Syntax</h3>
+
+<p>Because of this system of tags, HTML code will look familiar to you, and you'll be able to discover the "hidden tree structure" of your documents very easily.
+</p>
+<p>Alright, let's just dive into some examples, shall we?</p>
+
 <p><pre class="code">
-<span class="code cl">$</span> ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;Awesome Webpage&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Awesome Header&lt;/h1&gt;
+		&lt;p&gt;Hello World!&gt;&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
 </pre></p>
 
-Next install Ruby-env:
+<p>Even with this fairly simple example, we can glean some very important insight to how writing HTML works. First, did you notice the first line?</p>
 <p><pre class="code">
-<span class="code cl">$</span> brew install rbenv ruby-build
+&lt;!DOCTYPE html&gt;
+</pre></p>
+<p>Luckily for us, HTML5 has made it exceptionally easy to declare our code as HTML.  If you want to torture yourself, go look up all the information developers needed to include in the headers for HTML4 and before!</p>
+<p>The next thing we do is create a set of tags for our HTML code to live between:</p>
+<p><pre class="code">
+&lt;html&gt;
+...some other stuff...
+&lt;/html&gt;
 </pre></p>
 
-Add rbenv to bash so that it loads every time you open a terminal
+<p>Next, notice that between the begin and ending html tags we have two other sections at the next level of the tree:
+</p>
 <p><pre class="code">
-<span class="code cl">$</span> echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
-source ~/.bash_profile
+&lt;head&gt;
+...some stuff...
+&lt;/head&gt;
+&lt;body&gt;
+...some other stuff...
+&lt;/body&gt;
 </pre></p>
 
-Install Ruby:
+<p>Within these tags, we can include information specifc to these sections.  We'll use the head section to "hide" useful information from the end user (like links to our javascript or stylesheets that we'll see later) and the body section to define all of the elements the user sees.
+</p>
+
+<h3>Basic Elements</h3>
+
+<p>So what kind of elements can we use to style our webpage?</p>
 <p><pre class="code">
-<span class="code cl">$</span> rbenv install 2.2.1
-<span class="code cl">$</span> rbenv global 2.2.1
-<span class="code cl">$</span> ruby -v
+&lt;h1&gt;This is a header&lt;/h1&gt;
+&lt;br&gt;&lt;/br&gt;
+&lt;h2&gt;This is also a header&lt;/h2&gt;
+&lt;hr&gt;&lt;/hr&gt;
+&lt;p&gt;This is a paragraph of text&lt;/p&gt;
 </pre></p>
 
-<h2>Using Ruby</h2>
+<p>Let's look at how this looks in a browser:</p>
+<img src="images/htmlimages/page1.png" style="max-width:100%">
+<p>First, let's note that our browser defines some default styling for the different elements: h1 elements are stylized as large, bold-faced text and h2 and p elements are smaller.  Notice that the br tag produced a "break" between the h1 and h2 elements, and the hr tag produced a "horizontal rule" between the h2 and p.
+</p>
+
+<p>Some tags (like the br and hr) have a shortened form of syntax to make our code a little more readable:
+</p>
+
+<p><pre class="code">
+&lt;br&gt;&lt;/br&gt;
+&lt;hr&gt;&lt;/hr&gt;
+</pre></p>
+<p>Becomes:</p>
+<p><pre class="code">
+&lt;br /&gt;
+&lt;hr /&gt;
+</pre></p>
+
+<p>But simple text webpages become boring very quickly.  How can we add links and images?</p>
+<p><pre class="code">
+&lt;img src="carmen_logo.png"&gt;
+&lt;br /&gt;
+&lt;a href="https://carmen.osu.edu" alt="Carmen"&gt;Link to Carmen&lt;/a&gt;
+</pre></p>
+
+<p>Becomes:</p>
+<img src="images/htmlimages/page2.png" style="max-width:100%">
