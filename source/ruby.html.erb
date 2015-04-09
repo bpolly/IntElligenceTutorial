@@ -174,6 +174,8 @@ def say(input)
 end
 </pre></p>
 
+<p>In the above example, the start of a method definition is signalled using the "def" keyword followed by the name of the method and its parameters in parentheses. The end of the method definition is indicated by the "end" keyword. Here is another example:</p>
+
 <p><pre class="code">
 <span class="comment">// This method calculates the square of a number and returns the result. The result is assigned to the result variable and printed using the "puts" method</span>
 def square(num)
@@ -184,7 +186,7 @@ result = square(5)
 puts result
 </pre></p>
 
-<p>So in this example, we define a <span class="inlinecode">square()</span> method that squares a given number and the result is the return value of the method. This result is then assigned to a <span class="inlinecode">result</span> variable which is then outputted using the <span class="inlinecode">puts()</span> method. </p>
+<p>In this example, we define a <span class="inlinecode">square()</span> method that squares a given number and the result is the return value of the method. The method is then called and the result is assigned to a <span class="inlinecode">result</span> variable which is then outputted using the <span class="inlinecode">puts()</span> method. </p>
 
 <h3>String Interpolation</h3>
 <p>One useful feature of Ruby is called String Interpolation. It allows the developer to put Ruby code in the middle of a string. It is done by using the <span class="inlinecode">#{code}</span> notation. The code inside of the brackets will be executed first and the result will be outputted in its place. </p>
@@ -197,10 +199,10 @@ def square(num)
     num*num
 end
 
-puts #{square(5)}
+puts "The square of 5 is #{square(5)}"
 </pre></p>
 
-<p>This time, the return result of <span class="inlinecode">square()</span> is intereted when the <span class="inlinecode">puts</span> method is executed. Since <span class="inlinecode">puts</span> takes a string as its input, the <span class="inlinecode">#{square(5)}</span> is considered a string and the method call is the string interpolation. In one fell swoop the method <span class="inlinecode">square(5)</span> gets executed, the result is placed into a temporary string, which is then printed by <span class="inlinecode">puts</span>. Pretty neat, right?</p>
+<p>This time, the return result of <span class="inlinecode">square()</span> is interpreted when the <span class="inlinecode">puts</span> method is executed. Since <span class="inlinecode">puts</span> takes a string as its input, the <span class="inlinecode">#{square(5)}</span> is considered a string and the method call is the string interpolation. In one fell swoop the method <span class="inlinecode">square(5)</span> gets executed, the result is placed into a string prefixed with "The square of 5 is", and the string is then printed by <span class="inlinecode">puts</span>. Pretty neat, right?</p>
 
-<p>Stuff to add: if statements, loops, string interpolation (mention that strings primitives), arrays, methods (and parameters, including blocks of code), classes (objects of classes, @ variables).
-At some point, it should also be added that Ruby is a dynamically-typed language.</p>
+<p>Stuff to add: mention that strings primitives, mention that Ruby is dynamically-typed, arrays, blocks of code, classes (objects of classes, @ variables).</p>
+<p>Note: we should clear up the inconsistencies in referring to methods with or without parentheses.</p>
