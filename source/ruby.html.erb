@@ -69,7 +69,7 @@ Purpose:
 <span class="comment">// HelloWorld.rb</span>
 puts "Hello, world!"
 </pre></p>
-<p>Notice that though <span class="inlinecode">puts</span> is a function, no parentheses are needed before passing it the argument "Hello, world!" This is a special characteristic of Ruby: parentheses are optional for parameter passing. You might have also noticed the lack of a semicolon at the end of the <span class="inlinecode">puts</span> statement. In Ruby, semicolons are also optional.</p>
+<p>Notice that though <span class="inlinecode">puts()</span> is a function, no parentheses are needed before passing it the argument "Hello, world!" This is a special characteristic of Ruby: parentheses are optional for parameter passing. You might have also noticed the lack of a semicolon at the end of the <span class="inlinecode">puts()</span> statement. In Ruby, semicolons are also optional.</p>
 
 
 <h3>If/Else Statements</h3>
@@ -179,7 +179,7 @@ end
 <p>In the above example, the start of a method definition is signalled using the "def" keyword followed by the name of the method and its parameters in parentheses. The end of the method definition is indicated by the "end" keyword. Here is another example:</p>
 
 <p><pre class="code">
-<span class="comment">// This method calculates the square of a number and returns the result. The result is assigned to the result variable and printed using the "puts" method</span>
+<span class="comment">// This method calculates the square of a number and returns the result. The result is assigned to the result variable and printed using the puts() method</span>
 def square(num)
     num*num
 end
@@ -204,7 +204,7 @@ end
 puts "The square of 5 is #{square(5)}"
 </pre></p>
 
-<p>This time, the return result of <span class="inlinecode">square()</span> is interpreted when the <span class="inlinecode">puts</span> method is executed. Since <span class="inlinecode">puts</span> takes a string as its input, the <span class="inlinecode">#{square(5)}</span> is considered a string and the method call is the string interpolation. In one fell swoop the method <span class="inlinecode">square(5)</span> gets executed, the result is placed into a string prefixed with "The square of 5 is", and the string is then printed by <span class="inlinecode">puts</span>. Pretty neat, right?</p>
+<p>This time, the return result of <span class="inlinecode">square()</span> is interpreted when the <span class="inlinecode">puts()</span> method is executed. Since <span class="inlinecode">puts()</span> takes a string as its input, the <span class="inlinecode">#{square(5)}</span> is considered a string and the method call is the string interpolation. In one fell swoop the method <span class="inlinecode">square(5)</span> gets executed, the result is placed into a string prefixed with "The square of 5 is", and the string is then printed by <span class="inlinecode">puts()</span>. Pretty neat, right?</p>
 
 <p>Stuff to add: mention that strings primitives, clean up arrays section (mention that arrays can contain multiple types), blocks of code, classes (objects of classes, @ variables).</p>
 <p>Note: we should clear up the inconsistencies in referring to methods with or without parentheses.</p>
