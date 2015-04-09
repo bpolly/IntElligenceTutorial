@@ -3,23 +3,123 @@
 <h1><img src="../build/images/javascript_logo.png" alt="JavaScript Logo" id="logos"><span>  JavaScript</span></h1>
 
 <h2>Introduction</h2>
-JavaScript is.......
+<p>JavaScript is a programming language that can be used with HTML documents to provide a greater level of control and user interactivity to web pages.
+ It has all of the basic capabilities of most high-level programming languages, as well as some features created specifically for the creation of web content.
+ This tutorial will cover the basics of getting started in JavaScript programming, as well as resources for further learning. 
+ As this JavaScript tutorial is dependent on HTML, please make sure you have reviewed our HTML/CSS tutorial.
+<p>
 
 <h2>Getting Started</h2>
-To begin using JavaScript, create a basic HTML document.
+<p>To begin using JavaScript, create a basic HTML document.
 Make sure to review the <a href="htmlcss.html">HTML/CSS tutorial</a> if you are unfamiliar with how to do this.
 The following line of code is used to link the JavaScript file to the HTML file:
+<p>
 <p><pre class="code">
 <span class="code cl">1</span> <script src="scripts/main.js"></script>
 </pre></p>
-
 It will be included before your closing </body> tag, as shown below.
 <p><pre class="code">
-<span class="code cl">1</span> <html>
-<span class="code cl">2</span> <body>
-<span class="code cl">3</span> <script src="scripts/main.js"></script>
-<span class="code cl">4</span> </body>
-<span class="code cl">5</span> </html>
+<span class="code cl">1</span> &lt;html&gt
+<span class="code cl">2</span> &lt;body&gt;
+<span class="code cl">3</span> &lt;script src=&quot;scripts/main.js&quot;&gt;&lt;/script&gt;
+<span class="code cl">4</span> &lt;/body&gt;
+<span class="code cl">5</span> &lt;/html&gt;
 </pre></p>
 
 <h2>Next Step</h2>
+
+<p>Add the following JavaScript code to our example HTML file:<p>
+____
+<h2>Explanation</h2>
+<p>JavaScript is capable of manipulating the content of our HTML document. 
+In the example, we first selected the H1 element of our document, then we selected the Inner HTML. 
+The Inner HTML is all of the content within the element we selected. 
+We were then able to change the content of this element’s HTML by assigning it to ‘Hello, world&#33;’.
+</p>
+
+<h2>Variables</h2>
+<p>In JavaScript, variables are created with the following syntax:</p>
+
+<p><pre class="code">
+<span class="code cl">1</span>var exampleVar;
+</pre></p>
+
+<p>JavaScript has dynamic variable typing, meaning that the type of the variable can change throughout the script’s execution.
+The chart below demonstrates the syntax for each of the types available in JavaScript.</p>
+<table>
+	<tr>
+	<td>String</td>
+		<td>var exampleVar &#61; ‘Hello’;</td>
+		<td>JavaScript uses single quotes for strings</td>
+	</tr>
+	<tr>
+	<td>Number</td>
+		<td>var exampleVar &#61; 10; var exampleVar &#61; 5.87;</td>
+		<td>JavaScript does not distinguish between different types of numbers (ie “Integers” or “Floats”)</td>
+	</tr>
+	<tr>
+	<td>Boolean
+		<td>var exampleVar &#61; false;</td>
+		<td>Booleans are true or false without quotes</td>
+	</tr>
+	<tr>
+	<td>Array
+		<td>var exampleVar &#61; [1, 2, ‘A’, ‘B’];</td>
+		<td>Arrays can have elements of any type. Elements are accessed with this syntax: exampleVar[0]</td>
+	</tr>
+	<tr>
+	<td>Object
+		<td>var exampleVar &#61; document.querySelector('h1');</td>
+		<td>Almost everything in JavaScript is considered an object. This includes parts of the HTML document and functions.</td>
+	</tr>
+</table>
+
+<h2>Comments</h2>
+<p>There are two different  formats for JavaScript comments. Both formats are common in other languages</p>
+<p><pre class="code">
+<span class="code cl">1</span> /*
+<span class="code cl">2</span> This is a comment
+<span class="code cl">3</span> */
+<span class="code cl">4</span>
+<span class="code cl">5</span> //This is a comment
+</pre></p>
+
+<h2>Operators</h2>
+<p>JavaScript includes similar operators to other common languages, as well as functionality for strings.</p>
+<table>
+	<tr>
+		<td>&#43;</td>
+		<td>Concatenation, Add</td>
+		<td>2 &#43; 5; &#34Hello &#34 &#43; &#34world&#33;&#34;</td>
+	</tr>
+	<tr>
+		<td>&#45;</td>
+		<td>Subtract</td>
+	</tr>
+	<tr>
+		<td>&#42;</td>
+		<td>Multiply</td>
+	</tr>
+	<tr>
+		<td>&#47;</td>
+		<td>Divide</td>
+	</tr>	
+	<tr>
+		<td>&#61;</td>
+		<td>Assignment</td>
+	</tr>
+	<tr>
+		<td>&#61;&#61;&#61;</td>
+		<td>Identity</td>
+	</tr>
+	<tr>
+		<td>&#61;&#61;</td>
+		<td>Compare value</td>
+	</tr>
+	<tr>
+		<td>&#33;, &#33;&#61;</td>
+		<td>Negation, not equal</td>
+	</tr>
+</table>
+
+
