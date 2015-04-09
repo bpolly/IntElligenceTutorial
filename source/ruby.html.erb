@@ -91,7 +91,7 @@ else
 	puts "Let's not!"
 end
 </pre></p>
-<p>In this example, isSummer is a boolean value that is either true or false. If isSummer evaluates to <span class="inlinecode">true</span> then the string "Let's go outside!" is printed. If isSummer evaluates to <span class="inlinecode">false</span> then "Let's not!" is printed. In this case, isSummer is true, so "Let's go outside!" will be printed to the screen. You should take note that the "<span class="inlinecode">isSummer = true</span>" is not just the assignment of a value to the isSummer variable. In fact, it is the declaration of the variable, since isSummer had never been used before in the program. You may be asking yourself why there is no type declaration in front of the declaration, such as writing "<span class="inlinecode">boolean isSummer = true</span>". In Ruby, variable types do not need to be declared! The language even takes it a step forward and allows the type of a variable to change throughout a program. For example, the isSummer variable might later be used to hold a number instead of a boolean.</p>
+<p>In this example, <span class="inlinecode">isSummer</span> is a boolean value that is either true or false. If <span class="inlinecode">isSummer</span> evaluates to <span class="inlinecode">true</span> then the string "Let's go outside!" is printed. If <span class="inlinecode">isSummer</span> evaluates to <span class="inlinecode">false</span> then "Let's not!" is printed. In this case, <span class="inlinecode">isSummer</span> is true, so "Let's go outside!" will be printed to the screen. You should take note that the "<span class="inlinecode">isSummer = true</span>" is not just the assignment of a value to the <span class="inlinecode">isSummer</span> variable. In fact, it is the declaration of the variable, since <span class="inlinecode">isSummer</span> had never been used before in the program. You may be asking yourself why there is no type declaration in front of the declaration, such as writing "<span class="inlinecode">boolean isSummer = true</span>". In Ruby, variable types do not need to be declared! The language even takes it a step forward and allows the type of a variable to change throughout a program. For example, the <span class="inlinecode">isSummer</span> variable might later be used to hold a number instead of a boolean.</p>
 
 <h3>Loops</h3>
 <p>The most common element in any software program is the loop. Ruby gives developers multiple ways to implement a loop. </p>
@@ -117,7 +117,7 @@ end
 end
 </pre></p>
 
-<p>This loop is an example of a Ruby specific-loop. In Ruby, even numbers will be wrapped into objects. A number object has a method called "times()" that will do something that object's value times. So it will run this loop 15 times.</p>
+<p>This loop is an example of a Ruby specific-loop. In Ruby, even numbers will be wrapped into objects. A number object has a method called "<span class="inlinecode">times()</span>" that will do something that object's value times. So it will run this loop 15 times.</p>
 
 <p><pre class="code">
 <span class="comment">// Example RANGE loop</span>
@@ -129,9 +129,7 @@ end
 <p>This is another example of a Ruby specific loop. Ruby can interpret ranges of numbers as indices for the loop. So the <span class="inlinecode">0..10</span> is read as do this for each value of i between 1 and 10 (inclusive).</p>
 
 <h3>Arrays</h3>
-<p>In Ruby, arrays are a very powerful and versatile data structure. As in many programming languages, </p>
-
-<p>There are multiple ways of instantiating them in Ruby. One way is to give it all of its elements when you make it.</p>
+<p>In Ruby, arrays are a very powerful and versatile data structure, and there are multiple ways of instantiating them. One way is to give it all of its elements when you make it.</p>
 <p><pre class="code">
 arr = [1, 2, 3, 4, 5]
 </pre></p>
@@ -153,9 +151,11 @@ puts arr[0]  <span class="comment">// => prints "1"</span>
 arr = [1, 2, 3, 4, 5]
 arr.push(6)
 <span class="comment">// arr is now = [1, 2, 3, 4, 5, 6]</span>
-arr.insert(2, 'web')
-<span class="comment">// arr is now = [1, 2, 'web', 3, 4, 5, 6]</span>
+arr.insert(2, "web")
+<span class="comment">// arr is now = [1, 2, "web", 3, 4, 5, 6]</span>
 </pre></p>
+
+<p>Surprise! As you saw in the above example, arrays in Ruby can hold objects of multiple different types, so the <span class="inlinecode">arr</span> array is able to hold both strings and numbers.</p>
 
 <p>To remove items from the array, you have multiple options:</p>
 <p><pre class="code">
@@ -196,7 +196,7 @@ puts result
 <p>Remember the example class we wrote for using the <span class="inlinecode">square()</span> method? We can write it in fewer lines using string interpolation.</p>
 
 <p><pre class="code">
-<span class="comment">// New Square class using string interpolation</span>
+<span class="comment">// New square method using string interpolation</span>
 def square(num)
     num*num
 end
@@ -242,4 +242,6 @@ fig.age = 20 <span class="comment">// => The age of the "fig" object is now 20.<
 <p>Also of note is the "@" symbol in front of the variable names. This signifies to Ruby that these are instance variables, meaning that each object of the Tree class will have their own individual values for each of those variables.</p>
 <p>Lastly, the <span class="inlinecode">initialize()</span> method is an interesting one. This is the constructor method that gets called when you create a new Tree instance using <span class="inlinecode">Tree.new()</span>.
 
-<p>Stuff to add: mention that strings are primitives, clean up arrays section (mention that arrays can contain multiple types), blocks of code, classes (objects of classes, @ variables).</p>
+<h3>Conclusion</h3>
+
+<p>Stuff to add: mention that strings are primitives, blocks of code.</p>
