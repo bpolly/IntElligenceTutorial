@@ -224,8 +224,12 @@ class Tree
         @age = years
     end
 
-    def completeString
-        "#{genus} #{species} of age #{age}"
+    def completeName
+        "#{genus} #{species} of age #{age} years"
+    end
+
+    def incrementAge
+        @age = @age + 1
     end
 end
 </pre></p>
