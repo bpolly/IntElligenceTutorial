@@ -110,6 +110,8 @@ for i in arr do
 end
 </pre></p>
 
+
+<p>This loop is an example of a Ruby specific-loop. In Ruby, even numbers will be wrapped into objects. A number object has a method called "<span class="inlinecode">times()</span>" that will do something that object's value times. So it will run this loop 15 times.</p>
 <p><pre class="code">
 <span class="comment">// Example TIMES loop</span>
 15.times  do
@@ -117,7 +119,7 @@ end
 end
 </pre></p>
 
-<p>This loop is an example of a Ruby specific-loop. In Ruby, even numbers will be wrapped into objects. A number object has a method called "<span class="inlinecode">times()</span>" that will do something that object's value times. So it will run this loop 15 times.</p>
+<p>This is another example of a Ruby specific loop. Ruby can interpret ranges of numbers as indices for the loop. So the <span class="inlinecode">0..10</span> is read as do this for each value of i between 1 and 10 (inclusive).</p>
 
 <p><pre class="code">
 <span class="comment">// Example RANGE loop</span>
@@ -126,20 +128,18 @@ for i in 0..10
 end
 </pre></p>
 
-<p>This is another example of a Ruby specific loop. Ruby can interpret ranges of numbers as indices for the loop. So the <span class="inlinecode">0..10</span> is read as do this for each value of i between 1 and 10 (inclusive).</p>
-
 <h3>Arrays</h3>
-<p>In Ruby, arrays are a very powerful and versatile data structure, and there are multiple ways of instantiating them. One way is to give it all of its elements when you make it.</p>
+<p>In Ruby, arrays are a very powerful and versatile data structure, and there are multiple ways of instantiating them. One way is to give it all of its elements when you make it:</p>
 <p><pre class="code">
 arr = [1, 2, 3, 4, 5]
 </pre></p>
 
-<p>Another way is to give it space for a certain number of spots and assign them later.</p>
+<p>Another way is to give it space for a certain number of spots and assign them later:</p>
 <p><pre class="code">
 arr = Array.new(5)
 </pre></p>
 
-<p>You can assign values like you would in a Java array.</p>
+<p>You can assign values like you would in a Java array:</p>
 <p><pre class="code">
 arr = [1, 2, 3, 4, 5]
 puts arr[4]  <span class="comment">// => prints "5"</span>
@@ -238,8 +238,9 @@ fig = Tree.new("Ficus", "carica", 17)
 fig.age = 20 <span class="comment">// => The age of the "fig" object is now 20.</span>
 </pre></p>
 
-<p>The above definition of a "Tree" class shows the proper syntax for setting up the class and creating methods for it. The first line in the class, "<span class="inlinecode">attr_accessor :genus, :species, :age</span>", is an especially useful one. This line will tell Ruby to automatically create what are known as accessors and mutators for the class variables <span class="inlinecode">genus</span>, <span class="inlinecode">species</span>, and <span class="inlinecode">age</span>. By including this line of code, there is no need to define a method to be able get or set the value of any of those variables once an instance of the class has been created. For example, for the <span class="inlinecode">fig</span> object, the age can be easily modified using an assignment.</p>
-<p>Also of note is the "@" symbol in front of the variable names. This signifies to Ruby that these are instance variables, meaning that each object of the Tree class will have their own individual values for each of those variables.</p>
+<p>The above definition of a "Tree" class shows the proper syntax for setting up the class and creating methods for it. The first line in the class, "<span class="inlinecode">attr_accessor :genus, :species, :age</span>", is an especially useful one. This line will tell Ruby to automatically create what are known as accessors and mutators for the class variables <span class="inlinecode">genus</span>, <span class="inlinecode">species</span>, and <span class="inlinecode">age</span>. By including this line of code, there is no need to define a method to be able get or set the value of any of those variables once an instance of the class has been created. For example, for the <span class="inlinecode">fig</span> object, the age can be easily modified in another class which has a <span class="inlinecode">tree</span> object using an assignment statement.</p>
+
+<p>Also of note is the "@" symbol in front of the variable names. This signifies to Ruby that these are instance variables, meaning that each object of the Tree class will have their own individual values for each of those variables. Not only that, but instance variables are available to all methods in that class. Very similar to a global variable in Java.</p>
 <p>Lastly, the <span class="inlinecode">initialize()</span> method is an interesting one. This is the constructor method that gets called when you create a new Tree instance using <span class="inlinecode">Tree.new()</span>.
 
 <h2>Conclusion</h2>
