@@ -27,14 +27,13 @@
 <p><pre class="code">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
-	&lt;head&gt;
-		
-		&lt;title&gt;Awesome Webpage&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;h1&gt;Awesome Header&lt;/h1&gt;
-		&lt;p&gt;Hello World!&gt;&gt;
-	&lt;/body&gt;
+    &lt;head&gt;
+        &lt;title&gt;Awesome Webpage&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Awesome Header&lt;/h1&gt;
+        &lt;p&gt;Hello World!&gt;&gt;
+    &lt;/body&gt;
 &lt;/html&gt;
 </pre></p>
 
@@ -68,7 +67,7 @@
 &lt;/body&gt;
 </pre></p>
 
-<p>Within these tags, we can include information specifc to these sections.  We'll use the head section to "hide" useful information from the end user (like links to our javascript or stylesheets that we'll see later) and the body section to define all of the elements the user sees.
+<p>Within these tags, we can include information specifc to these sections.  We'll use the <span class="inlinecode">head</span> section to "hide" useful information from the end user (like links to our javascript or stylesheets that we'll see later) and the <span class="inlinecode">body</span> section to define all of the elements the user sees.
 </p>
 
 <h3>Basic Elements</h3>
@@ -85,10 +84,10 @@
 <p>Let's look at how this looks in a browser:</p>
 <img src="images/htmlimages/page1.png" style="max-width:100%">
 
-<p>First, let's note that our browser defines some default styling for the different elements: h1 elements are stylized as large, bold-faced text and h2 and p elements are smaller.  Notice that the br tag produced a "break" between the h1 and h2 elements, and the hr tag produced a "horizontal rule" between the h2 and p.
+<p>First, let's note that our browser defines some default styling for the different elements: <span class="inlinecode">h1</span> elements are stylized as large, bold-faced text and <span class="inlinecode">h2</span> and <span class="inlinecode">p</span> elements are smaller.  Notice that the <span class="inlinecode">br</span> tag produced a "break" between the <span class="inlinecode">h1</span> and <span class="inlinecode">h2</span>, and the <span class="inlinecode">hr</span> tag produced a "horizontal rule" between the <span class="inlinecode">h2</span> and <span class="inlinecode">p</span>.
 </p>
 
-<p>As a side note, you may have noticed that the br and hr tags have no corresponding close tag.  This is because br and hr are special elements that do not require closing tags.
+<p>As a side note, you may have noticed that the <span class="inlinecode">br</span> and <span class="inlinecode">hr</span> tags have no corresponding close tag.  This is because <span class="inlinecode">br</span> and <span class="inlinecode">hr</span> are special elements that do not require closing tags.
 </p>
 
 <p>Sometimes, you might find it useful to be able to group data together into logical elements.  Luckily for us, there are a few predefined elements to let us do this:
@@ -97,39 +96,39 @@
 <p><pre class="code">
 <span class="comment">&lt;!-- Ordered list --&gt;</span>
 &lt;ol&gt;
-	&lt;li&gt;this is&lt;/li&gt;
-	&lt;li&gt;a numbered&lt;/li&gt;
-	&lt;li&gt;list&lt;/li&gt;
+    &lt;li&gt;this is&lt;/li&gt;
+    &lt;li&gt;a numbered&lt;/li&gt;
+    &lt;li&gt;list&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr /&gt;
 <span class="comment">&lt;!-- Unordered list --&gt;</span>
 &lt;ul&gt;
-	&lt;li&gt;this is&lt;/li&gt;
-	&lt;li&gt;an unordered&lt;/li&gt;
-	&lt;li&gt;list&lt;/li&gt;
+    &lt;li&gt;this is&lt;/li&gt;
+    &lt;li&gt;an unordered&lt;/li&gt;
+    &lt;li&gt;list&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
 <span class="comment">&lt;!-- Table --&gt;</span>
 &lt;table&gt;
-	&lt;tr&gt;
-		&lt;th&gt;col1&lt;/th&gt;
-		&lt;th&gt;col2&lt;/th&gt;
-		&lt;th&gt;col3&lt;/th&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;row1col1&lt;/td&gt;
-		&lt;td&gt;row1col2&lt;/td&gt;
-		&lt;td&gt;row1col3&lt;/td&gt;
-	&lt;/tr&gt;
-	&lt;tr&gt;
-		&lt;td&gt;row2col1&lt;/td&gt;
-		&lt;td&gt;row2col2&lt;/td&gt;
-		&lt;td&gt;row2col3&lt;/td&gt;
-	&lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;th&gt;col1&lt;/th&gt;
+        &lt;th&gt;col2&lt;/th&gt;
+        &lt;th&gt;col3&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;row1col1&lt;/td&gt;
+        &lt;td&gt;row1col2&lt;/td&gt;
+        &lt;td&gt;row1col3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;row2col1&lt;/td&gt;
+        &lt;td&gt;row2col2&lt;/td&gt;
+        &lt;td&gt;row2col3&lt;/td&gt;
+    &lt;/tr&gt;
 &lt;/table&gt;
 </pre></p>
 
-<p>Here you can see examples of how to create ordered and unordered lists, as well as tables.  In the first part of the code, you can see how we nested li or "list items" inside of an ol or "ordered list" element.  For the second list, we nested the same li elements inside a ul or "unordered list" element.  Lastly, we use the table tag to denote a table and we nest tr or "table row" elements within.  Inside of each tr element, we have two different tags for th ("table headers") and td ("table datum") for header items and regular cells respectively.
+<p>Here you can see examples of how to create ordered and unordered lists, as well as tables.  In the first part of the code, you can see how we nested <span class="inlinecode">li</span> or "list items" inside of an ol or "ordered list" element.  For the second list, we nested the same li elements inside a <span class="inlinecode">ul</span> or "unordered list" element.  Lastly, we use the <span class="inlinecode">table</span> tag to denote a table and we nest <span class="inlinecode">tr</span> or "table row" elements within.  Inside of each <span class="inlinecode">tr</span> element, we have two different tags for <span class="inlinecode">th</span> ("table headers") and <span class="inlinecode">td</span> ("table datum") for header items and regular cells respectively.
 </p>
 
 <p>Let's take a look at how our browser beautifully handles these data collections:</p>
@@ -140,15 +139,15 @@
 <p>But simple text webpages become boring very quickly.  How can we add links and images?</p>
 <p><pre class="code">
 &lt;img src="carmen_logo.png"&gt;
-&lt;br /&gt;
+&lt;br&gt;
 &lt;a href="https://carmen.osu.edu"&gt;Link to Carmen&lt;/a&gt;
 </pre></p>
 
-<p>The img or "image" tag is used to display images (with the path given as a string), and the a or "anchor" tag is used to specify a link.  Between the opening and closing tags for the anchor, you get to specify the text to display for the link itself.  The above code becomes:
+<p>The <span class="inlinecode">img</span> or "image" tag is used to display images (with the path given as a string), and the <span class="inlinecode">a</span> or "anchor" tag is used to specify a link.  Between the opening and closing tags for the anchor, you get to specify the text to display for the link itself.  The above code becomes:
 </p>
 <img src="images/htmlimages/page3.png" style="max-width:100%">
 
-<p>You'll notice that in the above example, both the anchor tag and the image tag contain more than just their types.  These additional values are attributes (just like the way an XML tree's nodes can have additional attributes).  Attributes work as a key value pair in much the same way as the OSU Map component works.  In the previous example, src is the key and "carmen_logo.png" is the value for the image tag.
+<p>You'll notice that in the above example, both the anchor tag and the image tag contain more than just their types.  These additional values are attributes (just like the way an XML tree's nodes can have additional attributes).  Attributes work as a key value pair in much the same way as the OSU Map component works.  In the previous example, <span class="inlinecode">src</span> is the key and "carmen_logo.png" is the value for the <span class="inlinecode">img</span>.
 </p>
 
 <p>You might ask, what else can you do with attributes?  Well, we can use some default attribute names to lend a little extra flair to some of our elements:
@@ -162,5 +161,5 @@
 <p>Which, unsurprisingly, gives the following result:</p>
 <img src="images/htmlimages/page4.png" style="max-width:100%">
 
-<p>This type of styling is called in-line styling, and as you can imagine will get cumbersome very quickly.  This leads us to our next section...
+<p>This type of styling is called in-line styling, and as you can imagine will get cumbersome very quickly.  Please follow our tutorial on CSS for examples of ways to decouple your styling from your HTML.
 </p>
