@@ -6,12 +6,11 @@
 </p>
 
 <h2>Installation</h2>
-<h3>Getting Started</h3>
-<p>To begin using JavaScript, create a basic HTML document. Make sure to review the <a href="htmlcss.html">HTML/CSS tutorial</a> if you are unfamiliar with how to do this. The following line of code is used to specify the JavaScript scripts in the HTML file:
+<p>To begin using JavaScript, create a basic HTML document. Make sure to review the <a href="htmlcss.html">HTML/CSS tutorial</a> if you are unfamiliar with how to do this. The following line of code is used to specify the JavaScript scripts in the HTML file. You'll need to specify the source of the file as well. Let's say it's stored as scripts/myscript.js. Here's what the tag will look like:
 </p>
 
 <p><pre class="code">
-&lt;script&gt;&lt;/script&gt;
+&lt;script src="scripts/myscript.js"&gt;&lt;/script&gt;
 </pre></p>
 
 <p>Add the script tag to your example before your closing body tag, as shown below:</p>
@@ -19,7 +18,7 @@
 <p><pre class="code">
 &lt;html&gt
 &lt;head&gt;
-&lt;script&gt;&lt;/script&gt;
+&lt;script src="scripts/myscript.js"&gt;&lt;/script&gt;
 &lt;/head&gt;
 &lt;body&gt;
  ...
@@ -27,35 +26,7 @@
 &lt;/html&gt;
 </pre></p>
 
-<h3>Next Step</h3>
-
-<p>Next, we will add the following lines of JavaScript code to our example:</p>
-
-<p><pre class="code">
-function myFunction&#40;&#41;&#123;document.querySelector&#40;&#34;h1&#34;&#41;.innerHTML = &#34;Learn JavaScript&#34;&#59;&#125;
-</pre></p>
-
-<p><pre class="code">
-onload=&#34;myFunction&#40;&#41;&#34;
-</pre></p>
-
-<p>The first line will be added in between the script tags. The second line will be added within the body tag. This is shown below. Save your example file and note how it changed the page.
-</p>
-
-<p><pre class="code">
-<span class="code cl">1</span> &lt;html&gt
-<span class="code cl">2</span> &lt;head&gt;
-<span class="code cl">3</span> &lt;script&gt;function myFunction&#40;&#41;&#123;document.querySelector&#40;&#34;h1&#34;&#41;.innerHTML = &#34;Learn JavaScript&#34;&#59;&#125;&lt;/script&gt;
-<span class="code cl">4</span> &lt;/head&gt;
-<span class="code cl">5</span> &lt;body onload=&#34;myFunction&#40;&#41;&#34;&gt;
-<span class="code cl">6</span> ...
-<span class="code cl"> </span> &lt;/body&gt;
-<span class="code cl"> </span> &lt;/html&gt;
-</pre></p>
-
-<h3>Explanation</h3>
-<p>JavaScript is capable of manipulating the content of our HTML document. In the example, we first selected the h1 element of our document, then we selected the Inner HTML. The Inner HTML is all of the content within the element we selected. We were then able to change the content of this element's HTML by assigning it to "Hello, world&#33;".
-</p>
+<p>It's as simple as that!</p>
 
 <h2>Basics of the Language</h2>
 <h3>Variables</h3>
@@ -97,7 +68,7 @@ var exampleVar;
 </table>
 
 <h3>Comments</h3>
-<p>There are two different  formats for JavaScript comments. Both formats are common in other languages.
+<p>There are two different  formats for JavaScript comments. Both formats are common in other languages:
 </p>
 
 <p><pre class="code">
@@ -212,5 +183,37 @@ document.querySelector('html').onclick = function(){
 <p>As you can see from the example, we used the querySelector method that was used earlier, and we also wrote a new function to run the alert.
 </p>
 
-<h2>Now let's add to our website!</h2>
+<h2>Example Section - do we need?</h2>
+<p>This section isn't finished yet.</p>
+<h3>Next Step</h3>
+
+<p>Next, we will add the following lines of JavaScript code to our example:</p>
+
+<p><pre class="code">
+function myFunction&#40;&#41;&#123;document.querySelector&#40;&#34;h1&#34;&#41;.innerHTML = &#34;Learn JavaScript&#34;&#59;&#125;
+</pre></p>
+
+<p><pre class="code">
+onload=&#34;myFunction&#40;&#41;&#34;
+</pre></p>
+
+<p>The first line will be added in between the script tags. The second line will be added within the body tag. This is shown below. Save your example file and note how it changed the page.
+</p>
+
+<p><pre class="code">
+&lt;html&gt
+&lt;head&gt;
+&lt;script&gt;function myFunction&#40;&#41;&#123;document.querySelector&#40;&#34;h1&#34;&#41;.innerHTML = &#34;Learn JavaScript&#34;&#59;&#125;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body onload=&#34;myFunction&#40;&#41;&#34;&gt;
+ ...
+&lt;/body&gt;
+&lt;/html&gt;
+</pre></p>
+
+<h3>Explanation</h3>
+<p>JavaScript is capable of manipulating the content of our HTML document. In the example, we first selected the h1 element of our document, then we selected the Inner HTML. The Inner HTML is all of the content within the element we selected. We were then able to change the content of this element's HTML by assigning it to "Hello, world&#33;".
+</p>
+
+
 <h2>Conclusion</h2>
