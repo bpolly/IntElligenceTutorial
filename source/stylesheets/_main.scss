@@ -50,7 +50,7 @@ body {
 
 figure
 {
-    width:33%;
+    width:25%;
     float:left;
     margin:0px;
     text-align:center;
@@ -132,6 +132,12 @@ nav {
 			color: #F16529 !important;
 		}
 	}
+	
+	#cssNav {
+		a:hover {
+			color: #0070BA !important;
+		}
+	}
 }
 
 h1 {
@@ -160,6 +166,14 @@ h3 {
 #logos {
 	width:65px;
 	height:65px;
+	text-align: center;
+	vertical-align: bottom;
+	//display: block;
+}
+
+.logosMedium {
+	width:100px;
+	height:100px;
 	text-align: center;
 	vertical-align: bottom;
 	//display: block;
@@ -239,6 +253,12 @@ footer {
 	#htmlNav {
 		a:hover {
 			color: #F16529 !important;
+		}
+	}
+	
+	#cssNav {
+		a:hover {
+			color: #0070BA !important;
 		}
 	}
 
