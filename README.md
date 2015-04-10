@@ -6,6 +6,9 @@
 * JavaScript Manager: Braden Polly
 * HTML/CSS Manager: Emma Rastatter
 
+## How to Run
+In root directory, run `Middleman build`. This will compile all of the code in /source/ and output it into standard HTML files in /build/. The website is then viewed from the /build/ folder.
+
 ## Contributions
 ### Ruby Tutorial
 * Main Author(s): Braden Polly, Daniele Bellutta
