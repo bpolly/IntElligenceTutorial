@@ -10,12 +10,11 @@
 
 <ul>
     <li>Be able to replicate the process of installing Ruby.</li>
-    <li>Have knowledge on control-flow statements in Ruby.</li>
+    <li>Have knowledge on control-flow statements and string interpolation in Ruby.</li>
     <li>Recognize the differences between Ruby and other languages in terms of dynamic types.</li>
     <li>Have the ability to implement classes with methods and instance variables.</li>
     <li>Understand the basics of using blocks of code as parameters to methods.</li>
     <li>Be able to construct and mutate arrays.</li>
-    <li>Know the essence of string interpolation.</li>
 </ul>
 
 <h2>Installation</h2>
@@ -83,7 +82,7 @@ puts "Hello, world!"
 
 
 <h3>If/Else Statements</h3>
-<p>The fundamental basis of programming is predicated on doing something when one condition is true and doing something else when it is false. This still applies in Ruby. Ruby has a slighly different way of doing it, which you will see below: </p>
+<p>The fundamental basis of programming is predicated on doing something when one condition is true and doing something else when it is false. This still applies in Ruby. Ruby has a slightly different way of doing it, which you will see below: </p>
 <p><pre class="code">
 if condition
 	statement is true
@@ -129,7 +128,7 @@ end
 end
 </pre></p>
 
-<p>This is another example of a Ruby specific loop. Ruby can interpret ranges of numbers as indices for the loop. So the <span class="inlinecode">0..10</span> is read as do this for each value of i between 1 and 10 (inclusive).</p>
+<p>This is another example of a Ruby specific loop. Ruby can interpret ranges of numbers as indices for the loop. So the <span class="inlinecode">0..10</span> is read as "do this for each value of i between 1 and 10 (inclusive)".</p>
 
 <p><pre class="code">
 <span class="comment">// Example RANGE loop</span>
@@ -176,7 +175,7 @@ arr.delete_at(2)	<span class="comment">//=> returns 3</span>
 <span class="comment">// arr is now = [1, 2, 4]</span>
 </pre></p>
 
-<p>A final note regarding arrays is on how to iterate through them. Similarly to using an Iterator in Java, Ruby arrays have a <span class="inlinecode">each()</span> method that will allow you to easily go through each element in an array and perform an action, as shown below.</p>
+<p>A final note regarding arrays is on how to iterate through them. Similarly to using an Iterator in Java, Ruby arrays have an <span class="inlinecode">each()</span> method that will allow you to easily go through each element in an array and perform an action, as shown below.</p>
 
 <p><pre class="code">
 arr = [1, 2, 3, 4, 5]
@@ -188,7 +187,7 @@ arr.each { |element|
 <p>Something really useful about Ruby is a concept called "blocks of code". This allows a method to take a set of lines of code as a parameter. In the above case, the <span class="inlinecode">each()</span> method takes a block of code that tells it what to do for each element in the array. You may have noticed the "<span class="inlinecode">|element|</span>" syntax used in the example. This allows you to give a name to the current element that the <span class="inlinecode">each()</span> method is on, making it easy to use that name in your block of code. As an example, "x" could have worked perfectly fine by using the syntax "<span class="inlinecode">|x|</span>" instead of the one provided. A final note on passing blocks of code into methods is to use curly braces to signify the start and end of the block.</p>
 
 <h3>Methods</h3>
-<p>Methods in Ruby are very simple to define. Since Ruby is a dynamically-typed language, no parameter types nor return types need to be defined. Writing a new method is as easy as shown below.</p>
+<p>Methods in Ruby are very simple to define. Since Ruby is a dynamically typed language, neither parameter types nor return types need to be defined. Writing a new method is as easy as shown below.</p>
 
 <p><pre class="code">
 <span class="comment">// Example method that prints the variable passed into it</span>
@@ -197,7 +196,7 @@ def say(input)
 end
 </pre></p>
 
-<p>In the above example, the start of a method definition is signalled using the "def" keyword followed by the name of the method and its parameters in parentheses. The end of the method definition is indicated by the "end" keyword. Here is another example:</p>
+<p>In the above example, the start of a method definition is signaled using the "def" keyword followed by the name of the method and its parameters in parentheses. The end of the method definition is indicated by the "end" keyword. Here is another example:</p>
 
 <p><pre class="code">
 <span class="comment">// This method calculates the square of a number and returns the result. The result is assigned to the result variable and printed using the "puts" method</span>
@@ -209,7 +208,7 @@ result = square(5)
 puts result
 </pre></p>
 
-<p>In this example, we define a <span class="inlinecode">square()</span> method that squares a given number and the result is the return value of the method. The method is then called and the result is assigned to a <span class="inlinecode">result</span> variable which is then outputted using the <span class="inlinecode">puts()</span> method. You may have noticed that there is no return statement in this method. In Ruby, the "return" keyword is available to be used, but it is optional because the evaluation of the last statement in a method is automatically taken as its return value if no return statement is included.</p>
+<p>In this example, we define a <span class="inlinecode">square()</span> method that squares a given number and the result is the return value of the method. The method is then called and the result is assigned to a <span class="inlinecode">result</span> variable that is then outputted using the <span class="inlinecode">puts()</span> method. You may have noticed that there is no return statement in this method. In Ruby, the "return" keyword is available to be used, but it is optional because the evaluation of the last statement in a method is automatically taken as its return value if no return statement is included.</p>
 
 <h3>String Interpolation</h3>
 <p>One useful feature of Ruby is called String Interpolation. It allows the developer to put Ruby code in the middle of a string. It is done by using the <span class="inlinecode">#{code}</span> notation. The code inside of the brackets will be executed first and the result will be outputted in its place. </p>
@@ -259,7 +258,7 @@ fig = Tree.new("Ficus", "carica", 17)
 fig.age = 20 <span class="comment">// => The age of the "fig" object is now 20.</span>
 </pre></p>
 
-<p>The above definition of a "Tree" class shows the proper syntax for setting up the class and creating methods for it. The first line in the class, "<span class="inlinecode">attr_accessor :genus, :species, :age</span>", is an especially useful one. This line will tell Ruby to automatically create what are known as accessors and mutators for the class variables <span class="inlinecode">genus</span>, <span class="inlinecode">species</span>, and <span class="inlinecode">age</span>. By including this line of code, there is no need to define a method to be able get or set the value of any of those variables once an instance of the class has been created. For example, for the <span class="inlinecode">fig</span> object, the age can be easily modified in another class which has a <span class="inlinecode">tree</span> object using an assignment statement.</p>
+<p>The above definition of a "Tree" class shows the proper syntax for setting up the class and creating methods for it. The first line in the class, "<span class="inlinecode">attr_accessor :genus, :species, :age</span>", is an especially useful one. This line will tell Ruby to automatically create what are known as accessors and mutators for the class variables <span class="inlinecode">genus</span>, <span class="inlinecode">species</span>, and <span class="inlinecode">age</span>. By including this line of code, there is no need to define a method to be able get or set the value of any of those variables once an instance of the class has been created. For example, for the <span class="inlinecode">fig</span> object, the age can be easily modified in another class that has a <span class="inlinecode">tree</span> object using an assignment statement.</p>
 
 <p>Also of note is the "@" symbol in front of the variable names. This signifies to Ruby that these are instance variables, meaning that each object of the Tree class will have their own individual values for each of those variables. Not only that, but instance variables are available to all methods in that class, just like a global variable in Java.</p>
 <p>Lastly, the <span class="inlinecode">initialize()</span> method is an interesting one. This is the constructor method that gets called when you create a new Tree instance using <span class="inlinecode">Tree.new()</span>.
