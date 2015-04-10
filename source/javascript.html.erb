@@ -12,24 +12,46 @@ As this JavaScript tutorial is dependent on HTML, please make sure you have revi
 <h2>Getting Started</h2>
 <p>To begin using JavaScript, create a basic HTML document.
 Make sure to review the <a href="htmlcss.html">HTML/CSS tutorial</a> if you are unfamiliar with how to do this.
-The following line of code is used to link the JavaScript file to the HTML file:
+The following line of code is used to specify the JavaScript scripts in the HTML file.
 <p>
 <p><pre class="code">
-<span class="code cl">1</span> <script src="scripts/main.js"></script>
+<span class="code cl">1</span> &lt;script&gt;&lt;/script&gt;
 </pre></p>
 
-It will be included before your closing </body> tag, as shown below.
+Add the script tag to your example before your closing </body> tag, as shown below.
 <p><pre class="code">
 <span class="code cl">1</span> &lt;html&gt
-<span class="code cl">2</span> &lt;body&gt;
-<span class="code cl">3</span> &lt;script src=&quot;scripts/main.js&quot;&gt;&lt;/script&gt;
-<span class="code cl">4</span> &lt;/body&gt;
-<span class="code cl">5</span> &lt;/html&gt;
+<span class="code cl">2</span> &lt;head&gt;
+<span class="code cl">3</span> &lt;script&gt;&lt;/script&gt;
+<span class="code cl">4</span> &lt;/head&gt;
+<span class="code cl">5</span> &lt;body&gt;
+<span class="code cl">6</span> ...
+<span class="code cl"> </span> &lt;/body&gt;
+<span class="code cl"> </span> &lt;/html&gt;
 </pre></p>
 
 <h2>Next Step</h2>
 
-<p>Add the following JavaScript code to our example HTML file:<p>
+<p>Next, we will add the following lines of JavaScript code to our example:<p>
+<p><pre class="code">
+<span class="code cl">1</span> function myFunction&#40;&#41;&#123;document.querySelector&#40;&#34;h1&#34;&#41;.innerHTML = &#34;Learn JavaScript&#34;&#59;&#125;
+</pre></p>
+<p><pre class="code">
+<span class="code cl">1</span> onload=&#34;myFunction&#40;&#41;&#34;
+</pre></p>
+<p>The first line will be added in between the script tags. The second line will be added within the body tag.
+This is shown below.
+Save your example file and note how it changed the page.</p>
+<p><pre class="code">
+<span class="code cl">1</span> &lt;html&gt
+<span class="code cl">2</span> &lt;head&gt;
+<span class="code cl">3</span> &lt;script&gt;function myFunction&#40;&#41;&#123;document.querySelector&#40;&#34;h1&#34;&#41;.innerHTML = &#34;Learn JavaScript&#34;&#59;&#125;&lt;/script&gt;
+<span class="code cl">4</span> &lt;/head&gt;
+<span class="code cl">5</span> &lt;body onload=&#34;myFunction&#40;&#41;&#34;&gt;
+<span class="code cl">6</span> ...
+<span class="code cl"> </span> &lt;/body&gt;
+<span class="code cl"> </span> &lt;/html&gt;
+</pre></p>
 
 <h2>Explanation</h2>
 <p>JavaScript is capable of manipulating the content of our HTML document.
