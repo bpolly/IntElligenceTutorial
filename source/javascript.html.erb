@@ -95,7 +95,7 @@ This is a comment
 <table>
 	<tr>
 		<td>&#43;</td>
-		<td>Add (2 &#43; 5; &#34Hello &#34 &#43;) OR Concatenation (&#34world&#33;&#34;)</td>
+		<td>Add (2 &#43; 5;) OR Concatenation (&#34Hello &#34 &#43; &#34world&#33;&#34;)</td>
 	</tr>
 	<tr>
 		<td>&#45;</td>
@@ -192,11 +192,35 @@ document.querySelector('html').onclick = function(){
 <p>As you can see from the example, we used the querySelector method that was used earlier, and we also wrote a new function to run the alert.
 </p>
 
-<h2>Example Section - do we need?</h2>
-<p>This section isn't finished yet.</p>
-<h3>Next Step</h3>
+<h3>Changing HTML</h3>
 
-<p>Next, we will add the following lines of JavaScript code to our example:</p>
+<p><pre class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;!-- add a stylesheet here --&gt;
+		&lt;meta charset=&quot;utf-8&quot;&gt;
+		&lt;title&gt;HTML Sample&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Int Elligence is awesome!&lt;/h1&gt;
+		&lt;p&gt;Int Elligence is a group that makes different web applications. We hope this tutorial helps you learn a little more about what we do!&lt;/p&gt;
+		&lt;img src=&quot;http://dhwlijwe9jil7.cloudfront.net/files/2012/07/4/native-app-vs-web-app.jpg&quot; alt=&quot;A web apps image&quot; height=&quot;300px&quot;&gt;
+		&lt;p&gt;We hope you are enjoying this tutorial. By the end you should know about:&lt;/p&gt;
+		&lt;ul&gt; &lt;!-- changed to list in the tutorial --&gt;
+			&lt;li&gt;Language Basics&lt;/li&gt;
+			&lt;li&gt;Functions&lt;/li&gt;
+			&lt;li&gt;Events&lt;/li&gt;
+			&lt;li&gt;And more!&lt;/li&gt;
+		&lt;/ul&gt;
+		&lt;p&gt;You can also learn about &lt;a href=&quot;htmlcss.html&quot;&gt;HTML&lt;/a&gt; and &lt;a href=&quot;ruby.html&quot;&gt;Ruby&lt;/a&gt; in our other tutorials!&lt;/p&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre></p>
+
+<p>Given this simple HTML code, here is an interesting example of how we could use JavaScript to change the webpage:</p>
+
+<p>JavaScript is capable of manipulating the content of our HTML document. The following lines of code will change the text in the h1 tag of our HTML document. We first select the h1 element of our document; then we select the inner HTML. The inner HTML is all of the content within the element, so we are then able to change the content of this element's HTML by assigning it to "Hello, world&#33;" The first line will be added in between the script tags. The second line will be added within the body tag.</p>
 
 <p><pre class="code">
 function myFunction&#40;&#41;&#123;document.querySelector&#40;&#34;h1&#34;&#41;.innerHTML = &#34;Learn JavaScript&#34;&#59;&#125;
@@ -206,23 +230,8 @@ function myFunction&#40;&#41;&#123;document.querySelector&#40;&#34;h1&#34;&#41;.
 onload=&#34;myFunction&#40;&#41;&#34;
 </pre></p>
 
-<p>The first line will be added in between the script tags. The second line will be added within the body tag. This is shown below. Save your example file and note how it changed the page.
-</p>
-
-<p><pre class="code">
-&lt;html&gt
-&lt;head&gt;
-&lt;script&gt;function myFunction&#40;&#41;&#123;document.querySelector&#40;&#34;h1&#34;&#41;.innerHTML = &#34;Learn JavaScript&#34;&#59;&#125;&lt;/script&gt;
-&lt;/head&gt;
-&lt;body onload=&#34;myFunction&#40;&#41;&#34;&gt;
- ...
-&lt;/body&gt;
-&lt;/html&gt;
-</pre></p>
-
-<h3>Explanation</h3>
-<p>JavaScript is capable of manipulating the content of our HTML document. In the example, we first selected the h1 element of our document, then we selected the Inner HTML. The Inner HTML is all of the content within the element we selected. We were then able to change the content of this element's HTML by assigning it to "Hello, world&#33;".
-</p>
-
+<p>Note that we could also change other content in the HTML document, such as images. We could also add events the the webpage so that changes are made in a more user-interactive way.</p>
 
 <h2>Conclusion</h2>
+<p>As you can tell, JavaScript is a language that offers a lot of unique features that help make webpages more dynamic. Try using JavaScript when you want users to interact with your page!
+</p>
