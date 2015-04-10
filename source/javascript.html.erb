@@ -2,46 +2,46 @@
 
 <h1><img src="../build/images/javascript_logo.png" alt="JavaScript Logo" id="logos"><span>  JavaScript</span></h1>
 
-<h2>Introduction</h2>
-<p>JavaScript is a programming language that can be used with HTML documents to provide a greater level of control and user interactivity to web pages.
-It has all of the basic capabilities of most high-level programming languages, as well as some features created specifically for the creation of web content.
-This tutorial will cover the basics of getting started in JavaScript programming, as well as resources for further learning.
-As this JavaScript tutorial is dependent on HTML, please make sure you have reviewed our HTML/CSS tutorial.
-<p>
+<p>JavaScript is a programming language that can be used with HTML documents to provide a greater level of control and user interactivity to web pages. It has all of the basic capabilities of most high-level programming languages, as well as some features created specifically for the creation of web content. This tutorial will cover the basics of getting started in JavaScript programming, as well as resources for further learning. 
+</p>
 
-<h2>Getting Started</h2>
-<p>To begin using JavaScript, create a basic HTML document.
-Make sure to review the <a href="htmlcss.html">HTML/CSS tutorial</a> if you are unfamiliar with how to do this.
-The following line of code is used to specify the JavaScript scripts in the HTML file.
-<p>
+<h2>Installation</h2>
+<h3>Getting Started</h3>
+<p>To begin using JavaScript, create a basic HTML document. Make sure to review the <a href="htmlcss.html">HTML/CSS tutorial</a> if you are unfamiliar with how to do this. The following line of code is used to specify the JavaScript scripts in the HTML file:
+</p>
+
 <p><pre class="code">
-<span class="code cl">1</span> &lt;script&gt;&lt;/script&gt;
+&lt;script&gt;&lt;/script&gt;
 </pre></p>
 
-Add the script tag to your example before your closing </body> tag, as shown below.
+<p>Add the script tag to your example before your closing body tag, as shown below:</p>
+
 <p><pre class="code">
-<span class="code cl">1</span> &lt;html&gt
-<span class="code cl">2</span> &lt;head&gt;
-<span class="code cl">3</span> &lt;script&gt;&lt;/script&gt;
-<span class="code cl">4</span> &lt;/head&gt;
-<span class="code cl">5</span> &lt;body&gt;
-<span class="code cl">6</span> ...
-<span class="code cl"> </span> &lt;/body&gt;
-<span class="code cl"> </span> &lt;/html&gt;
+&lt;html&gt
+&lt;head&gt;
+&lt;script&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+ ...
+&lt;/body&gt;
+&lt;/html&gt;
 </pre></p>
 
-<h2>Next Step</h2>
+<h3>Next Step</h3>
 
-<p>Next, we will add the following lines of JavaScript code to our example:<p>
+<p>Next, we will add the following lines of JavaScript code to our example:</p>
+
 <p><pre class="code">
-<span class="code cl">1</span> function myFunction&#40;&#41;&#123;document.querySelector&#40;&#34;h1&#34;&#41;.innerHTML = &#34;Learn JavaScript&#34;&#59;&#125;
+function myFunction&#40;&#41;&#123;document.querySelector&#40;&#34;h1&#34;&#41;.innerHTML = &#34;Learn JavaScript&#34;&#59;&#125;
 </pre></p>
+
 <p><pre class="code">
-<span class="code cl">1</span> onload=&#34;myFunction&#40;&#41;&#34;
+onload=&#34;myFunction&#40;&#41;&#34;
 </pre></p>
-<p>The first line will be added in between the script tags. The second line will be added within the body tag.
-This is shown below.
-Save your example file and note how it changed the page.</p>
+
+<p>The first line will be added in between the script tags. The second line will be added within the body tag. This is shown below. Save your example file and note how it changed the page.
+</p>
+
 <p><pre class="code">
 <span class="code cl">1</span> &lt;html&gt
 <span class="code cl">2</span> &lt;head&gt;
@@ -53,132 +53,103 @@ Save your example file and note how it changed the page.</p>
 <span class="code cl"> </span> &lt;/html&gt;
 </pre></p>
 
-<h2>Explanation</h2>
-<p>JavaScript is capable of manipulating the content of our HTML document.
-In the example, we first selected the H1 element of our document, then we selected the Inner HTML.
-The Inner HTML is all of the content within the element we selected.
-We were then able to change the content of this element's HTML by assigning it to "Hello, world&#33;".
+<h3>Explanation</h3>
+<p>JavaScript is capable of manipulating the content of our HTML document. In the example, we first selected the h1 element of our document, then we selected the Inner HTML. The Inner HTML is all of the content within the element we selected. We were then able to change the content of this element's HTML by assigning it to "Hello, world&#33;".
 </p>
 
+<h2>Basics of the Language</h2>
 <h3>Variables</h3>
 <p>In JavaScript, variables are created with the following syntax:</p>
 
 <p><pre class="code">
-<span class="code cl">1</span>var exampleVar;
+var exampleVar;
 </pre></p>
 
-<p>JavaScript has dynamic variable typing, meaning that the type of the variable can change throughout the script's execution.
-The chart below demonstrates the syntax for each of the types available in JavaScript.</p>
+<p>JavaScript has dynamic variable typing, meaning that the type of the variable can change throughout the script's execution. The chart below demonstrates the syntax for each of the types available in JavaScript:
+</p>
+
 <table>
-<tr>
-<td>String</td>
-<td>var exampleVar &#61; "Hello";</td>
-<td>JavaScript uses single or double quotes for strings</td>
-</tr>
-<tr>
-<td>Number</td>
-<td>var exampleVar &#61; 10;<br>var exampleVar &#61; 5.87;</td>
-<td>JavaScript does not distinguish between different types of numbers (ie "Integers" or "Floats")</td>
-</tr>
-<tr>
-<td>Boolean
-<td>var exampleVar &#61; false;</td>
-<td>Booleans are true or false without quotes</td>
-</tr>
-<tr>
-<td>Array
-<td>var exampleVar &#61; [1, 2, "A", "B"];</td>
-<td>Arrays can have elements of any type. Elements are accessed with this syntax: exampleVar[0]</td>
-</tr>
-<tr>
-<td>Object
-<td>var exampleVar &#61; document.querySelector('h1');</td>
-<td>Almost everything in JavaScript is considered an object. This includes parts of the HTML document and functions.</td>
-</tr>
+	<tr>
+		<td>String</td>
+		<td>var exampleVar &#61; "Hello";</td>
+		<td>JavaScript uses single or double quotes for strings</td>
+	</tr>
+	<tr>
+		<td>Number</td>
+		<td>var exampleVar &#61; 10;<br>var exampleVar &#61; 5.87;</td>
+		<td>JavaScript does not distinguish between different types of numbers (ie "Integers" or "Floats")</td>
+	</tr>
+	<tr>
+		<td>Boolean</td>
+		<td>var exampleVar &#61; false;</td>
+		<td>Booleans are true or false without quotes</td>
+	</tr>
+	<tr>
+		<td>Array</td>
+		<td>var exampleVar &#61; [1, 2, "A", "B"];</td>
+		<td>Arrays can have elements of any type. Elements are accessed with this syntax: exampleVar[0]</td>
+	</tr>
+	<tr>
+		<td>Object</td>
+		<td>var exampleVar &#61; document.querySelector('h1');</td>
+		<td>Almost everything in JavaScript is considered an object. This includes parts of the HTML document and functions.</td>
+	</tr>
 </table>
 
 <h3>Comments</h3>
-<p>There are two different  formats for JavaScript comments. Both formats are common in other languages</p>
+<p>There are two different  formats for JavaScript comments. Both formats are common in other languages.
+</p>
+
 <p><pre class="code">
-<span class="code cl">1</span> /*
-<span class="code cl">2</span> This is a comment
-<span class="code cl">3</span> */
-<span class="code cl">4</span>
-<span class="code cl">5</span> //This is a comment
+/*
+This is a comment
+*/
+
+//This is a comment
 </pre></p>
 
 <h3>Operators</h3>
-<p>JavaScript includes similar operators to other common languages, as well as functionality for strings.</p>
+<p>JavaScript includes similar operators to other common languages, as well as functionality for strings.
+</p>
+
 <table>
-<tr>
-<td>&#43;</td>
-<td>Concatenation, Add</td>
-<td>2 &#43; 5; &#34Hello &#34 &#43; &#34world&#33;&#34;</td>
-</tr>
-<tr>
-<td>&#45;</td>
-<td>Subtract</td>
-</tr>
-<tr>
-<td>&#42;</td>
-<td>Multiply</td>
-</tr>
-<tr>
-<td>&#47;</td>
-<td>Divide</td>
-</tr>
-<tr>
-<td>&#61;</td>
-<td>Assignment</td>
-</tr>
-<tr>
-<td>&#61;&#61;&#61;</td>
-<td>Identity</td>
-</tr>
-<tr>
-<td>&#61;&#61;</td>
-<td>Compare value</td>
-</tr>
-<tr>
-<td>&#33;, &#33;&#61;</td>
-<td>Negation, not equal</td>
-</tr>
-<tr>
-	<td>&#43;</td>
-	<td>Concatenation, Add</td>
-</tr>
-<tr>
-	<td>&#45;</td>
-	<td>Subtract</td>
-</tr>
-<tr>
-	<td>&#42;</td>
-	<td>Multiply</td>
-</tr>
-<tr>
-	<td>&#47;</td>
-	<td>Divide</td>
-</tr>	
-<tr>
-	<td>&#61;</td>
-	<td>Assignment</td>
-</tr>
-<tr>
-	<td>&#61;&#61;&#61;</td>
-	<td>Identity</td>
-</tr>
-<tr>
-	<td>&#61;&#61;</td>
-	<td>Compare value</td>
-</tr>
-<tr>
-	<td>&#33;, &#33;&#61;</td>
-	<td>Negation, not equal</td>
-</tr>
+	<tr>
+		<td>&#43;</td>
+		<td>Add (2 &#43; 5; &#34Hello &#34 &#43;) OR Concatenation (&#34world&#33;&#34;)</td>
+	</tr>
+	<tr>
+		<td>&#45;</td>
+		<td>Subtract</td>
+	</tr>
+	<tr>
+		<td>&#42;</td>
+		<td>Multiply</td>
+	</tr>
+	<tr>
+		<td>&#47;</td>
+		<td>Divide</td>
+	</tr>
+	<tr>
+		<td>&#61;</td>
+		<td>Assignment</td>
+	</tr>
+	<tr>
+		<td>&#61;&#61;&#61;</td>
+		<td>Identity</td>
+	</tr>
+	<tr>
+		<td>&#61;&#61;</td>
+		<td>Compare value</td>
+	</tr>
+	<tr>
+		<td>&#33;, &#33;&#61;</td>
+		<td>Negation, not equal</td>
+	</tr>
 </table>
 
 <h3>Conditionals</h3>
-<p>Just like with many other coding languages, you can use conditional statements in JavaScript. The most common conditional is an if...else statement:</p>
+<p>Just like with many other coding languages, you can use conditional statements in JavaScript. The most common conditional is an if...else statement:
+</p>
 
 <p><pre class="code">
 var color = 'purple';
@@ -189,10 +160,12 @@ if (color === 'purple'){
 }
 </pre></p>
 
-<p>So in the above example, if color === purple evaluates to true, the code in the if statement will be executed. Otherwise, the code in the else statement would be executed.</p>
+<p>So in the above example, if color === purple evaluates to true, the code in the if statement will be executed. Otherwise, the code in the else statement would be executed.
+</p>
 
 <h3>Functions</h3>
-<p>Similar to other languages you may have used before, functions in JavaScript can be used to package code that you want to use again later.</p>
+<p>Similar to other languages you may have used before, functions in JavaScript can be used to package code that you want to use again later.
+</p>
 
 <p>For example, we can select the h1 element from our sample webpage using a function:</p>
 
@@ -206,7 +179,8 @@ var exampleVar = document.querySelector('h1');
 alert('hello world!');
 </pre></p>
 
-<p>These kinds of functions are already stored in your browser, so they are already available for anyone to use.</p>
+<p>These kinds of functions are already stored in your browser, so they are already available for anyone to use.
+</p>
 
 <p>You can also write your own functions. Let's try it now!</p>
 
@@ -226,8 +200,17 @@ add(0.5, 2.3);
 </pre></p>
 
 <h3>Events</h3>
+<p>Events are one of the most important aspects of JavaScript. They allow you to execute code in response to something that is happening in the browser-- like hovering or clicking your mouse over certain elements in the page. Below is an example of an event that creates an alert when you click somewhere in your webpage:
+</p>
 
+<p><pre class="code">
+document.querySelector('html').onclick = function(){
+	alert('Hey, you clicked on the page!');
+}
+</pre></p>
 
+<p>As you can see from the example, we used the querySelector method that was used earlier, and we also wrote a new function to run the alert.
+</p>
 
 <h2>Now let's add to our website!</h2>
 <h2>Conclusion</h2>
