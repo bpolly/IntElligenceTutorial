@@ -172,3 +172,47 @@ So far, we've only concerned ourselves with making the content of our elements l
 <p>It may look intimidating at first, but all you need to keep in mind is that each one of these four attributes will have a set number of pixels devoted to it.  Because of this, we can control the space between our elements, whether our elements have borders (and the type of border), and where background colors or images start and end.
 </p>
 
+<p>Here's an example of setting some of these properties with CSS:</p>
+
+<p><pre class="code">
+<span class="comment">&lt;!-- Our CSS file --&gt;</span>
+div {
+      width: 100px;
+      height: 50px;
+      padding: 5px;
+      border: 1px solid black;
+      margin: 10px;
+    }
+</pre></p>
+
+<p>In this example, we can actually calculate the height and width div elements will take up on our resulting webpage.  Calculate total width of an element as: width + left padding + right padding + left border + right border + left margin + right margin.  Similarly we can calculate the height of an element as: height + top padding + bottom padding + top border + bottom border + top margin + bottom margin.  In the example above, the total width is 132 pixels and the total height is 82 pixels.
+</p>
+
+<p>Be careful, however, because we can set left, right, top, and bottom to be different sizes using the following syntax:
+</p>
+
+<p><pre class="code">
+<span class="comment">&lt;!-- Our CSS file --&gt;</span>
+div {
+      margin-top: 10px;
+      margin-bottom: 50px;
+      margin-left: 5px;
+      margin-right: 0px;
+    }
+p {
+      margin: 10px 0px 50px 5px;
+}
+table {
+      margin: 10px 20px 30px;
+}
+img {
+      margin: 10px 50px;
+}
+</pre></p>
+
+<p>Confused yet?  Let's walk through them one by one.  The <span class="inlinecode">div</span> should be pretty self-explanatory, but I bet you wouldn't have guessed that the <span class="inlinecode">p</span> has exactly the same margins all the way around.  If we want to define all four margins in a single line, we always start with the top and work our way clockwise around the box.  In this case, 10 pixels for the top, 50 for the right, 5 for the bottom, and 0 for the left.  Next we have the <span class="inlinecode">table</span>; what can we do with 3 values?  Simple: the top is the first value, and middle value corresponds to the left and right margins, and the last value is for the bottom.  Lastly we have the <span class="inlinecode">img</span>.  With two values, we define the first value to correspond to the top and bottom and let the second value define the left and right margins.
+</p>
+
+<p>Now that you know how to style your webpages, let's make them come alive with <a href="javascript.html">Javascript</a>.
+</p>
+
