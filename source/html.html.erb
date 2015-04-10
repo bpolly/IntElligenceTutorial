@@ -1,0 +1,166 @@
+<link rel="stylesheet" type="text/css" href="../build/stylesheets/html.css">
+
+<!-- HEADER -->
+<h1>
+<img src="../build/images/html_logo.png" alt="HTML Logo" id="logos" style="vertical-align:middle"><span>  HTML</span></h1>
+
+
+<h2>Installation</h2>
+
+<p>Luckily for us, the ability to read and make sense of HTML and CSS code is built-in to your everyday browser! That means there's no messy setup and we can get right down to creating webpages using your text editor of choice.
+</p>
+
+<h2>Writing HTML</h2>
+
+<p>The first thing we need to talk about is what HTML is and what it can do for us.</p>
+
+<p>HTML stands for HyperText Markup Language - what is a markup language you ask?  Well, a markup language is a language designed to make it easy to "mark up" different sections of your document in different styles.  HTML accomplishes this by using matched tags similar to what you've seen in XML trees.
+</p>
+
+<h3>Structure and Syntax</h3>
+
+<p>Because of this system of tags, HTML code will look familiar to you, and you'll be able to discover the "hidden tree structure" of your documents very easily.
+</p>
+
+<p>Alright, let's just dive into some examples, shall we?</p>
+
+<p><pre class="code">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		
+		&lt;title&gt;Awesome Webpage&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Awesome Header&lt;/h1&gt;
+		&lt;p&gt;Hello World!&gt;&gt;
+	&lt;/body&gt;
+&lt;/html&gt;
+</pre></p>
+
+<p>Even with this fairly simple example, we can glean some very important insight to how writing HTML works. First, did you notice the first line?</p>
+<p><pre class="code">
+&lt;!DOCTYPE html&gt;
+</pre></p>
+
+<p>Luckily for us, HTML5 has made it exceptionally easy to declare our code as HTML.  If you want to torture yourself, go look up all the information developers needed to include in the headers for HTML4 and before!</p>
+
+<p>The next thing we do is create a set of tags for our HTML code to live between:</p>
+
+<p><pre class="code">
+&lt;html&gt;
+<span class="comment">&lt;!-- some other stuff --&gt;</span>
+&lt;/html&gt;
+</pre></p>
+
+<p>Here we can also see the syntax for declaring comments in HTML code.  Using an exclamation mark followed by two dashes begins the comment, and two dashes ends the comment.
+</p>
+
+<p>Next, notice that between the begin and ending html tags we have two other sections at the next level of the tree:
+</p>
+
+<p><pre class="code">
+&lt;head&gt;
+<span class="comment">&lt;!-- some stuff --&gt;</span>
+&lt;/head&gt;
+&lt;body&gt;
+<span class="comment">&lt;!-- some other stuff --&gt;</span>
+&lt;/body&gt;
+</pre></p>
+
+<p>Within these tags, we can include information specifc to these sections.  We'll use the head section to "hide" useful information from the end user (like links to our javascript or stylesheets that we'll see later) and the body section to define all of the elements the user sees.
+</p>
+
+<h3>Basic Elements</h3>
+
+<p>So what kind of elements can we use to style our webpage?</p>
+<p><pre class="code">
+&lt;h1&gt;This is a header&lt;/h1&gt;
+&lt;br&gt;
+&lt;h2&gt;This is also a header&lt;/h2&gt;
+&lt;hr&gt;
+&lt;p&gt;This is a paragraph of text&lt;/p&gt;
+</pre></p>
+
+<p>Let's look at how this looks in a browser:</p>
+<img src="images/htmlimages/page1.png" style="max-width:100%">
+
+<p>First, let's note that our browser defines some default styling for the different elements: h1 elements are stylized as large, bold-faced text and h2 and p elements are smaller.  Notice that the br tag produced a "break" between the h1 and h2 elements, and the hr tag produced a "horizontal rule" between the h2 and p.
+</p>
+
+<p>As a side note, you may have noticed that the br and hr tags have no corresponding close tag.  This is because br and hr are special elements that do not require closing tags.
+</p>
+
+<p>Sometimes, you might find it useful to be able to group data together into logical elements.  Luckily for us, there are a few predefined elements to let us do this:
+</p>
+
+<p><pre class="code">
+<span class="comment">&lt;!-- Ordered list --&gt;</span>
+&lt;ol&gt;
+	&lt;li&gt;this is&lt;/li&gt;
+	&lt;li&gt;a numbered&lt;/li&gt;
+	&lt;li&gt;list&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr /&gt;
+<span class="comment">&lt;!-- Unordered list --&gt;</span>
+&lt;ul&gt;
+	&lt;li&gt;this is&lt;/li&gt;
+	&lt;li&gt;an unordered&lt;/li&gt;
+	&lt;li&gt;list&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr /&gt;
+<span class="comment">&lt;!-- Table --&gt;</span>
+&lt;table&gt;
+	&lt;tr&gt;
+		&lt;th&gt;col1&lt;/th&gt;
+		&lt;th&gt;col2&lt;/th&gt;
+		&lt;th&gt;col3&lt;/th&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;row1col1&lt;/td&gt;
+		&lt;td&gt;row1col2&lt;/td&gt;
+		&lt;td&gt;row1col3&lt;/td&gt;
+	&lt;/tr&gt;
+	&lt;tr&gt;
+		&lt;td&gt;row2col1&lt;/td&gt;
+		&lt;td&gt;row2col2&lt;/td&gt;
+		&lt;td&gt;row2col3&lt;/td&gt;
+	&lt;/tr&gt;
+&lt;/table&gt;
+</pre></p>
+
+<p>Here you can see examples of how to create ordered and unordered lists, as well as tables.  In the first part of the code, you can see how we nested li or "list items" inside of an ol or "ordered list" element.  For the second list, we nested the same li elements inside a ul or "unordered list" element.  Lastly, we use the table tag to denote a table and we nest tr or "table row" elements within.  Inside of each tr element, we have two different tags for th ("table headers") and td ("table datum") for header items and regular cells respectively.
+</p>
+
+<p>Let's take a look at how our browser beautifully handles these data collections:</p>
+<img src="images/htmlimages/page2.png" style="max-width:100%">
+
+<p>
+
+<p>But simple text webpages become boring very quickly.  How can we add links and images?</p>
+<p><pre class="code">
+&lt;img src="carmen_logo.png"&gt;
+&lt;br /&gt;
+&lt;a href="https://carmen.osu.edu"&gt;Link to Carmen&lt;/a&gt;
+</pre></p>
+
+<p>The img or "image" tag is used to display images (with the path given as a string), and the a or "anchor" tag is used to specify a link.  Between the opening and closing tags for the anchor, you get to specify the text to display for the link itself.  The above code becomes:
+</p>
+<img src="images/htmlimages/page3.png" style="max-width:100%">
+
+<p>You'll notice that in the above example, both the anchor tag and the image tag contain more than just their types.  These additional values are attributes (just like the way an XML tree's nodes can have additional attributes).  Attributes work as a key value pair in much the same way as the OSU Map component works.  In the previous example, src is the key and "carmen_logo.png" is the value for the image tag.
+</p>
+
+<p>You might ask, what else can you do with attributes?  Well, we can use some default attribute names to lend a little extra flair to some of our elements:
+</p>
+
+<p><pre class="code">
+&lt;h3 style="color: red"&gt;This is a red header.&lt;/h3&gt;
+&lt;p style="color: blue"&gt;This is some blue text.&lt;/p&gt;
+</pre></p>
+
+<p>Which, unsurprisingly, gives the following result:</p>
+<img src="images/htmlimages/page4.png" style="max-width:100%">
+
+<p>This type of styling is called in-line styling, and as you can imagine will get cumbersome very quickly.  This leads us to our next section...
+</p>
