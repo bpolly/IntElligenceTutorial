@@ -102,14 +102,14 @@
 	&lt;li&gt;list&lt;/li&gt;
 &lt;/ol&gt;
 &lt;hr /&gt;
-<span class="comment">&lt;!-- Unordered list--&gt;</span>
+<span class="comment">&lt;!-- Unordered list --&gt;</span>
 &lt;ul&gt;
 	&lt;li&gt;this is&lt;/li&gt;
 	&lt;li&gt;an unordered&lt;/li&gt;
 	&lt;li&gt;list&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr /&gt;
-<span class="comment">&lt;!-- Table--&gt;</span>
+<span class="comment">&lt;!-- Table --&gt;</span>
 &lt;table&gt;
 	&lt;tr&gt;
 		&lt;th&gt;col1&lt;/th&gt;
@@ -155,8 +155,8 @@
 </p>
 
 <p><pre class="code">
-&lt;h3 style="color:red"&gt;This is a red header.&lt;/h3&gt;
-&lt;p style="color:blue"&gt;This is some blue text.&lt;/p&gt;
+&lt;h3 style="color: red"&gt;This is a red header.&lt;/h3&gt;
+&lt;p style="color: blue"&gt;This is some blue text.&lt;/p&gt;
 </pre></p>
 
 <p>Which, unsurprisingly, gives the following result:</p>
@@ -165,10 +165,12 @@
 <p>This type of styling is called in-line styling, and as you can imagine will get cumbersome very quickly.  This leads us to our next section...
 </p>
 
-<h3>CSS</h3>
+<h2>Writing CSS</h2>
 
 <p>As seen in our previous examples, using inline styling can get messy very quickly.  We need a way to separate the code defining our styling and the code defining the layout of our elements.  Enter CSS.
 </p>
+
+<h3>CSS Locations</h3>
 
 <p>If you remember from our earlier discussion of the structure of an HTML document, all the previous HTML examples were being placed in the body section of the document.  Let's make use of the special head section to define a unified point of control over our formatting.
 </p>
@@ -179,8 +181,8 @@
 <p><pre class="code">
 &lt;head&gt;
 	&lt;style&gt;
-		h3 { color:red; }
-		p { color:blue; }
+		h3 { color: red; }
+		p { color: blue; }
 	&lt;/style&gt;
 &lt;/head&gt;
 &lt;body&gt;
@@ -192,3 +194,131 @@
 <p>As you can see, we've really cleaned up the actual HTML markup of our header and paragraph elements by moving the styling to its own section in the header.  Don't worry about the syntax of the styling elements for now, we'll discuss this in some depth later.  For now, let's just check that everything still renders as it did before:
 </p>
 <img src="images/htmlimages/page5.png" style="max-width:100%">
+
+<p>Now that we know how to move styling elements away from their HTML markup, wouldn't it be great if we could separate the styling and markup documents entirely?  Turns out, that's a fairly easy (and common) design practice.  Here's how:
+</p>
+
+<p><pre class="code">
+<span class="comment">&lt;!-- Our HTML document --&gt;</span>
+&lt;head&gt;
+	&lt;link rel="stylesheet" type="text/css" href="theme.css"&gt;
+&lt;/head&gt;
+</pre></p>
+<p><pre class="code">
+<span class="comment">&lt;!-- theme.css file --&gt;</span>
+h3 { color: red; }
+p { color: blue; }
+</pre></p>
+
+<p>I'm going to spare you from looking at the exact same screenshot again; please believe that it works the way you expect it to!
+</p>
+
+<h3>CSS Syntax and Selectors</h3>
+
+<p>Before we talk about CSS specific syntax, we need to revist element attributes in HTML first.  Two very important attributes that we can declare elements to have: class and id.  Here's a quick example:
+</p>
+
+<p><pre class="code">
+&lt;h3 id="redHeader"&gt;This is a red header.&lt;/h3&gt;
+&lt;p class="blueElements"&gt;This is some blue text.&lt;/p&gt;
+</pre></p>
+
+<p>That seems easy enough, but what does it do for us?  To answer that, we need to go back and look at CSS syntax rules.  Remember our first example where we stylized a paragraph element?  We used the element's tag in front of a set of curly braces to "select" which element we wanted to apply our styles to.  In fact, this first part of the CSS code is actually called the selector, and this is where our ids and classes come in so useful.
+</p>
+
+<p>But let's look at an example, shall we?</p>
+
+<p><pre class="code">
+<span class="comment">&lt;!-- Our HTML document --&gt;</span>
+&lt;h3&gt;This is a regular header.&lt;/h3&gt;
+&lt;h3 class="someText"&gt;This is a header with class.&lt;/h3&gt;
+&lt;p&gt;This is a regular paragraph.&lt;/p&gt;
+&lt;p class="someText"&gt;This paragraph is part of a class.&lt;/p&gt;
+&lt;p id="special" class="someText"&gt;This paragraph is special.&lt;/p&gt;
+&lt;p class="someText"&gt;This is another paragraph in the class.&lt;/p&gt;
+</pre></p>
+
+<p>So what we've done is define four paragraphs: one has no id or class, three share a class, and one has a specific id.  Let's look at how we can use CSS selectors to selectively apply styles to these eleemnts:
+</p>
+
+<p><pre class="code">
+<span class="comment">&lt;!-- Our CSS file --&gt;</span>
+p { background-color: white; }
+.someText { background-color: red; }
+#special { color: grey; }
+</pre></p>
+
+<p>The first thing we've done is set the background color of all paragraph elements to grey.  The second line shows us that we can prefix a class name with a period to use that class name as a CSS selector.  In this case, we've set all elements of the class "someText" to have a red background color.  Lastly, we can preface our ids with a pound sign to select them - in this case setting the text color to grey on the element with an id of "special".
+</p>
+
+<h3>Why is it called CSS?</h3>
+
+<p>Before we look at the rendering of this example, you should probably know that CSS actually stands for "Cascading Style Sheets".  What that means to us as developers is that the style changes "cascade" through the different selectors while being applied.  In this case, all of the p elements will obtain a white background color unless a more specific or later defined rule changes that.  You can see how this works with the "special" element - it has a red background color due to being in the "someText" class, but also obtains the grey text coloring from the #special selector:
+</p>
+<img src="images/htmlimages/page6.png" style="max-width:100%">
+
+<p>If we were to remove the class attribute of the "special" element, we'll see that the background color styling from the p selector is applied to the "special" element instead.  This is quite unfortunate, because now we can't read it!
+</p>
+<p><pre class="code">
+<span class="comment">&lt;!-- Our HTML document --&gt;</span>
+&lt;h3&gt;This is a regular header.&lt;/h3&gt;
+&lt;h3 class="someText"&gt;This is a header with class.&lt;/h3&gt;
+&lt;p&gt;This is a regular paragraph.&lt;/p&gt;
+&lt;p class="someText"&gt;This paragraph is part of a class.&lt;/p&gt;
+&lt;p id="special"&gt;This paragraph is special.&lt;/p&gt;
+&lt;p class="someText"&gt;This is another paragraph in the class.&lt;/p&gt;
+</pre></p>
+<img src="images/htmlimages/page7.png" style="max-width:100%">
+
+<p>It may seem like magic, but that's probably because it is!  But what happens if you have two different rules that conflict with one another?  How do we decide which style wins out and is the one seen by the end user?
+</p>
+
+<p>We can string together selectors to be more specific about which elements get styled!</p>
+
+<p><pre class="code">
+<span class="comment">&lt;!-- Our CSS file --&gt;</span>
+p { background-color: white; }
+h3.someText { color: blue; }
+p.someText { background-color: red; }
+#special { color: grey; }
+</pre></p>
+<img src="images/htmlimages/page8.png" style="max-width:100%">
+
+<p>Notice how the second header has a different styling than the other h3 element OR the p elements of the same class!  We've now used a selector to pick out all h3 elements of a certain type and only applied our defined style to those elements.
+</p>
+
+<p>In addition to being able to use CSS selectors to be more specific about which elements we want to apply styles to, we can use the comma with selectors to apply broad styles to more than one element type at a time:
+</p>
+
+<p><pre class="code">
+<span class="comment">&lt;!-- Our CSS file --&gt;</span>
+h2, h3, p { background-color: white; }
+</pre></p>
+
+<p>This piece of CSS will set the background color of all h2, h3, and p elements to white.</p>
+
+<p>Remember our "hidden tree structure"?  We can use it to our advantage with CSS selectors as well:</p>
+
+<p><pre class="code">
+<span class="comment">&lt;!-- Our CSS file --&gt;</span>
+div p { background-color: white; }
+div > p { background-color: yellow; }
+</pre></p>
+
+<p>The first selector will find all p elements which are children (or nested within) div elements.  The second selector finds only p elements which are direct children (as opposed to the first example where the div element can be at any node closer to the root than the p element).  There are also selectors for dealing with sibling elements (first found, all siblings, etc).
+</p>
+
+<p>Beyond being able to define your own ids and classes to select specific elements, there are so many other attributes for modifying the look and behavior of webpage elements:
+</p>
+
+<h3>The Box Model</h3>
+
+<p>One thing that becomes very important when placing elements on your page (whether next to one another or nested within each other) are the following parts that make up each element:
+<ul>
+	<li>Margin</li>
+	<li>Border</li>
+	<li>Padding</li>
+	<li>Content</li>
+</ul>
+So far, we've only concerned ourselves with making the content look good.
+</p>
